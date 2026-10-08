@@ -1,0 +1,24 @@
+# Quartus build artifacts
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+*.qws
+*.qpf.user
+*.rpt
+*.sof
+*.smsg
+*.pin
+*.rdf
+
+# Gowin build artifacts (in case you also track that project)
+impl/
+tmp/
+*.fs
+*.cst.bak
+
+# Editor/OS
+.vscode/
+.DS_Store
+Thumbs.db

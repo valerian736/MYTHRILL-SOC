@@ -1,0 +1,35 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+    <FileList>
+        <File path="src/MLP.sv" type="file.verilog" enable="1"/>
+        <File path="src/MLP_include.sv" type="file.verilog" enable="1"/>
+        <File path="src/MYTHRILL-SOC.sv" type="file.verilog" enable="1"/>
+        <File path="src/aht10_driver.sv" type="file.verilog" enable="1"/>
+        <File path="src/axi_sensor_controller.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_MLP.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_bram.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_esc.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_gpio.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_interconnect.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_pwm.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_uart.sv" type="file.verilog" enable="1"/>
+        <File path="src/ds2331_driver.sv" type="file.verilog" enable="1"/>
+        <File path="src/i2c.sv" type="file.verilog" enable="1"/>
+        <File path="src/mlp_bridge.sv" type="file.verilog" enable="1"/>
+        <File path="src/neuron.sv" type="file.verilog" enable="1"/>
+        <File path="src/picorv32.v" type="file.verilog" enable="1"/>
+        <File path="src/pwm.sv" type="file.verilog" enable="1"/>
+        <File path="src/reset_top.sv" type="file.verilog" enable="1"/>
+        <File path="src/rs485_controller.sv" type="file.verilog" enable="1"/>
+        <File path="src/uart.sv" type="file.verilog" enable="1"/>
+        <File path="src/MYTHRILL_SOC.cst" type="file.cst" enable="1"/>
+        <File path="src/soc test.sdc" type="file.sdc" enable="1"/>
+        <File path="src/firmware.hex" type="file.other" enable="1"/>
+        <File path="src/mlp_bias.svh" type="file.other" enable="1"/>
+        <File path="src/mlp_weight.svh" type="file.other" enable="1"/>
+    </FileList>
+</Project>
