@@ -181,9 +181,9 @@ pengetesan pada hardware FPGA tang nano 20k untuk mengeluarkan hasil inferensi d
 ![sintesis RTL pada quartus prime](<imgs/synthesis quartus prime.png>)
 
 
-## Cara Build & Jalankan
+## Kompilasi Firmware
 
-### Kompilasi Firmware
+### wsl
 
 kompilasi firmware dijanlan melalui linux wsl subsystem pada windows dengan toolchain-riscv
 
