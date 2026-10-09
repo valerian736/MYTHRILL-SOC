@@ -219,7 +219,10 @@ clean:
 
 ---
 
-
+<p align="center">
+  <b>PERURI Chip Hackathon 2026 — Track 03: AI / Edge Accelerator</b><br>
+  <i>"From sensor to thruster, all in one chip."</i>
+</p>
 
 
 
