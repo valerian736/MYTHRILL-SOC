@@ -9,9 +9,8 @@ module neuron #(
     parameter dataWidth = 16,
     //parameter sigmoidSize = 5,
     parameter weightIntWidth = 1,
-    parameter actType = "relu",
-    parameter string biasFile = "",
-    parameter string weightFile = ""
+    parameter actType = "relu"
+
 ) (
     input                      clk,
     input                      rst,
@@ -39,8 +38,8 @@ module neuron #(
   reg [2*dataWidth-1:0] sum;
   reg [2*dataWidth-1:0] bias;
 
-reg [31:0] biasReg[0:0];
-initial biasReg[0] = bias_const(layerNo, neuronNo);
+  reg [31:0] biasReg[0:0];
+  initial biasReg[0] = bias_const(layerNo, neuronNo);
   reg weight_valid;
   reg mult_valid;
   wire mux_valid;
@@ -71,7 +70,7 @@ initial biasReg[0] = bias_const(layerNo, neuronNo);
   assign ren = myinputValid;
 
   always @(posedge clk) begin
-bias <= {{dataWidth{biasReg[0][dataWidth-1]}},
+    bias <= {{dataWidth{biasReg[0][dataWidth-1]}},
          biasReg[0][dataWidth-1:0]} <<< (dataWidth - weightIntWidth);
   end
 
@@ -135,18 +134,18 @@ bias <= {{dataWidth{biasReg[0][dataWidth-1]}},
   end
 
 
-weight_rom #(
-    .layer       (layerNo),
-    .neuron      (neuronNo),
-    .weight_depth(numWeight),
-    .data_width  (dataWidth),
-    .adress_width(addressWidth)
-) WM (
-    .clk(clk),
-    .read_en(ren),
-    .read_addr(r_addr[addressWidth-1:0]),
-    .dout(w_out)
-);
+  weight_rom #(
+      .layer       (layerNo),
+      .neuron      (neuronNo),
+      .weight_depth(numWeight),
+      .data_width  (dataWidth),
+      .adress_width(addressWidth)
+  ) WM (
+      .clk(clk),
+      .read_en(ren),
+      .read_addr(r_addr[addressWidth-1:0]),
+      .dout(w_out)
+  );
 
   generate
     if (actType == "linear") begin : g_Linear
@@ -179,25 +178,24 @@ weight_rom #(
 endmodule
 
 module weight_rom #(
-    parameter int layer        = 1,       // 1, 2, or 3
-    parameter int neuron       = 0,       // 0..3
+    parameter int layer        = 1,   // 1, 2, or 3
+    parameter int neuron       = 0,   // 0..3
     parameter int weight_depth = 5,
     parameter int data_width   = 32,
     parameter int adress_width = 3
 ) (
-    input  logic                      clk,
-    input  logic                      read_en,
-    input  logic [adress_width-1:0]   read_addr,
-    output logic [data_width-1:0]     dout
+    input  logic                    clk,
+    input  logic                    read_en,
+    input  logic [adress_width-1:0] read_addr,
+    output logic [  data_width-1:0] dout
 );
 
   `include "mlp_weight.svh"
 
-  reg [data_width-1:0] mem [0:weight_depth-1];
+  reg [data_width-1:0] mem[0:weight_depth-1];
 
   integer i;
-  initial for (i = 0; i < weight_depth; i = i + 1)
-      mem[i] = weight_const(layer, neuron, i);
+  initial for (i = 0; i < weight_depth; i = i + 1) mem[i] = weight_const(layer, neuron, i);
 
   always_ff @(posedge clk) begin
     if (read_en) dout <= mem[read_addr];

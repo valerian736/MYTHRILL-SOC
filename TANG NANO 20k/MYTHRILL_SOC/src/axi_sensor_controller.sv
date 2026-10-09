@@ -41,10 +41,10 @@ module axi_sensor_controller #(
     input  logic SN3000_RX,
     output logic SN3000_TX,
     output logic SN3000_DERE,
-    inout  wire SCL_AHT,
-    inout  wire SDA_AHT,
-    inout  wire SCL_RTC,
-    inout  wire SDA_RTC,
+    inout  wire  SCL_AHT,
+    inout  wire  SDA_AHT,
+    inout  wire  SCL_RTC,
+    inout  wire  SDA_RTC,
 
     // direct sensor outputs
     output logic [19:0] temp_raw,
@@ -60,17 +60,73 @@ module axi_sensor_controller #(
 
   logic [19:0] temp_d, hum_d;
   logic [15:0] irr_d, wind_d;
-  logic [ 7:0] hour_d;
+  logic [7:0] hour_d;
   logic irr_valid_d, wind_valid_d;
   logic irr_valid_i, wind_valid_i;
 
-  sync_pipe #(.W(20), .STAGES(PIPE)) p_temp (.clk(clk), .rstn(resetn), .d(temp_d), .q(temp_raw));
-  sync_pipe #(.W(20), .STAGES(PIPE)) p_hum  (.clk(clk), .rstn(resetn), .d(hum_d),  .q(hum_raw));
-  sync_pipe #(.W(16), .STAGES(PIPE)) p_irr  (.clk(clk), .rstn(resetn), .d(irr_d),  .q(irr_raw));
-  sync_pipe #(.W(16), .STAGES(PIPE)) p_wind (.clk(clk), .rstn(resetn), .d(wind_d), .q(wind_raw));
-  sync_pipe #(.W(8),  .STAGES(PIPE)) p_hour (.clk(clk), .rstn(resetn), .d(hour_d), .q(hour_raw));
-  sync_pipe #(.W(1),  .STAGES(PIPE)) p_irrv (.clk(clk), .rstn(resetn), .d(irr_valid_i),  .q(irr_valid));
-  sync_pipe #(.W(1),  .STAGES(PIPE)) p_windv(.clk(clk), .rstn(resetn), .d(wind_valid_i), .q(wind_valid));
+  sync_pipe #(
+      .W(20),
+      .STAGES(PIPE)
+  ) p_temp (
+      .clk(clk),
+      .rstn(resetn),
+      .d(temp_d),
+      .q(temp_raw)
+  );
+  sync_pipe #(
+      .W(20),
+      .STAGES(PIPE)
+  ) p_hum (
+      .clk(clk),
+      .rstn(resetn),
+      .d(hum_d),
+      .q(hum_raw)
+  );
+  sync_pipe #(
+      .W(16),
+      .STAGES(PIPE)
+  ) p_irr (
+      .clk(clk),
+      .rstn(resetn),
+      .d(irr_d),
+      .q(irr_raw)
+  );
+  sync_pipe #(
+      .W(16),
+      .STAGES(PIPE)
+  ) p_wind (
+      .clk(clk),
+      .rstn(resetn),
+      .d(wind_d),
+      .q(wind_raw)
+  );
+  sync_pipe #(
+      .W(8),
+      .STAGES(PIPE)
+  ) p_hour (
+      .clk(clk),
+      .rstn(resetn),
+      .d(hour_d),
+      .q(hour_raw)
+  );
+  sync_pipe #(
+      .W(1),
+      .STAGES(PIPE)
+  ) p_irrv (
+      .clk(clk),
+      .rstn(resetn),
+      .d(irr_valid_i),
+      .q(irr_valid)
+  );
+  sync_pipe #(
+      .W(1),
+      .STAGES(PIPE)
+  ) p_windv (
+      .clk(clk),
+      .rstn(resetn),
+      .d(wind_valid_i),
+      .q(wind_valid)
+  );
 
   // RS485 debug: 0x1C irr, 0x20 wind = {rx0[7:0], tx_cnt[7:0], rx_cnt[3:0], flags[3:0]}
   logic [3:0] irr_dbg_fl, irr_dbg_rxc, wind_dbg_fl, wind_dbg_rxc;
@@ -99,8 +155,7 @@ module axi_sensor_controller #(
     end else if (do_write) begin
       bvalid <= 1'b1;
       if (awaddr[4:2] == 3'd6) begin
-        for (int b = 0; b < 4; b++)
-        if (wstrb[b]) sensor_poll_ms[b*8+:8] <= wdata[b*8+:8];
+        for (int b = 0; b < 4; b++) if (wstrb[b]) sensor_poll_ms[b*8+:8] <= wdata[b*8+:8];
       end
     end else if (bvalid && bready) begin
       bvalid <= 1'b0;

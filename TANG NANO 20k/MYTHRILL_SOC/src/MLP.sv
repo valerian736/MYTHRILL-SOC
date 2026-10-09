@@ -141,7 +141,7 @@ module MLP (
   );
 
 
-  assign out_data       = x3_out;
+  assign out_data  = x3_out;
   assign out_valid = o3_valid[0];
 
 endmodule : MLP
@@ -252,58 +252,31 @@ module layer #(
     output logic [NN*dataWidth-1:0] x_out
 );
 
-
-function automatic string mif_name(input string prefix, input int layer, input int idx);
-    case (layer)
-        1: case (idx)
-            0: return {prefix, "_1_0.mem"};
-            1: return {prefix, "_1_1.mem"};
-            2: return {prefix, "_1_2.mem"};
-            3: return {prefix, "_1_3.mem"};
-        endcase
-        2: case (idx)
-            0: return {prefix, "_2_0.mem"};
-            1: return {prefix, "_2_1.mem"};
-            2: return {prefix, "_2_2.mem"};
-            3: return {prefix, "_2_3.mem"};
-        endcase
-        3: case (idx)
-            0: return {prefix, "_3_0.mem"};
-        endcase
-    endcase
-    return "";  // unreachable, silences the tool
-endfunction
-
-	generate
-	genvar i;
-  for ( i = 0; i < NN; i++) begin : neuron_gen
-    localparam string wFile = mif_name("w", layerNum, i);
-    localparam string bFile = mif_name("b", layerNum, i);
-
-    neuron #(
-        .numWeight(numWeight),
-        .layerNo(layerNum),
-        .neuronNo(i),
-        .dataWidth(dataWidth),
-        .weightIntWidth(weightIntWidth),
-        .actType(actType),
-        .weightFile(wFile),
-        .biasFile(bFile)
-    ) n (
-        .clk(clk),
-        .rst(rst),
-        .myinput(x_in),
-        .weightValid(weightValid),
-        .biasValid(biasValid),
-        .weightValue(weightValue),
-        .biasValue(biasValue),
-        .config_layer_num(config_layer_num),
-        .config_neuron_num(config_neuron_num),
-        .myinputValid(x_valid),
-        .out(x_out[i*dataWidth+:dataWidth]),
-        .outvalid(o_valid[i])
-    );
-  end
+  generate
+    genvar i;
+    for (i = 0; i < NN; i++) begin : neuron_gen
+      neuron #(
+          .numWeight(numWeight),
+          .layerNo(layerNum),
+          .neuronNo(i),
+          .dataWidth(dataWidth),
+          .weightIntWidth(weightIntWidth),
+          .actType(actType)
+      ) n (
+          .clk(clk),
+          .rst(rst),
+          .myinput(x_in),
+          .weightValid(weightValid),
+          .biasValid(biasValid),
+          .weightValue(weightValue),
+          .biasValue(biasValue),
+          .config_layer_num(config_layer_num),
+          .config_neuron_num(config_neuron_num),
+          .myinputValid(x_valid),
+          .out(x_out[i*dataWidth+:dataWidth]),
+          .outvalid(o_valid[i])
+      );
+    end
   endgenerate
 
 endmodule : layer

@@ -41,9 +41,9 @@ module mlp_bridge #(
     input logic        irr_valid,
     input logic        wind_valid,
 
-    input  logic              mlp_ready,
-    output logic [31:0]       feat[5],
-    output logic              start
+    input  logic        mlp_ready,
+    output logic [31:0] feat     [5],
+    output logic        start
 );
 
   // DS3231 hours register (BCD, 24h or 12h mode) -> 0..23
@@ -76,14 +76,14 @@ module mlp_bridge #(
     FIRE
   } st_t;
 
-  st_t                 state;
-  logic [         2:0] idx;
-  logic [4:0][19:0]    snap;
-  logic                irr_seen;
-  logic                wind_seen;
+  st_t                      state;
+  logic        [ 2:0]       idx;
+  logic        [ 4:0][19:0] snap;
+  logic                     irr_seen;
+  logic                     wind_seen;
 
-  logic signed [20:0] rx;
-  logic signed [52:0] prod;
+  logic signed [20:0]       rx;
+  logic signed [52:0]       prod;
   assign rx   = {1'b0, snap[idx]};
   assign prod = rx * a_tab[idx];
 
@@ -94,7 +94,7 @@ module mlp_bridge #(
       irr_seen  <= 1'b0;
       wind_seen <= 1'b0;
       start     <= 1'b0;
-      feat      <= '{default: '0}; 
+      feat      <= '{default: '0};
       snap      <= '0;
     end else begin
       start <= 1'b0;
@@ -118,7 +118,7 @@ module mlp_bridge #(
           if (idx == 3'd4) begin
             state <= FIRE;
           end else begin
-            idx   <= idx + 1'b1;
+            idx <= idx + 1'b1;
           end
         end
         FIRE: begin

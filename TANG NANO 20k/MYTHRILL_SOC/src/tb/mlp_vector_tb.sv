@@ -1,12 +1,9 @@
 `timescale 1ns / 1ps
 
-// Checks MLP core against vectors.txt from the notebook.
-// vectors.txt line: 5 input words + expected output word (hex, Q16.16).
-
 module mlp_vector_tb;
-  localparam int NV = 100;       // vectors to run
-  localparam int TOL = 2;        // allowed |diff| in LSB
-  localparam int TIMEOUT = 2000; // cycles to wait for out_valid
+  localparam int NV = 100;
+  localparam int TOL = 2;
+  localparam int TIMEOUT = 2000;
 
   logic clk = 0;
   logic rst_n = 0;
@@ -24,13 +21,42 @@ module mlp_vector_tb;
   int fd, rc, n, errors, worst, timeouts;
   int diff, t;
   bit done;
+  string vec_path;
 
+  // -------------------------------------------------------------------
+  // DEBUG: dump ROM + bias contents at time 0
+  // -------------------------------------------------------------------
+  initial begin
+    #1;
+    $display("=== ROM dump at t=1 ===");
+    $display("L1 n0 ROM[0..4] = %08h %08h %08h %08h %08h", dut.l1.neuron_gen[0].n.WM.mem[0],
+             dut.l1.neuron_gen[0].n.WM.mem[1], dut.l1.neuron_gen[0].n.WM.mem[2],
+             dut.l1.neuron_gen[0].n.WM.mem[3], dut.l1.neuron_gen[0].n.WM.mem[4]);
+    $display("L2 n0 ROM[0..3] = %08h %08h %08h %08h", dut.l2.neuron_gen[0].n.WM.mem[0],
+             dut.l2.neuron_gen[0].n.WM.mem[1], dut.l2.neuron_gen[0].n.WM.mem[2],
+             dut.l2.neuron_gen[0].n.WM.mem[3]);
+    $display("L3 n0 ROM[0..3] = %08h %08h %08h %08h", dut.l3.neuron_gen[0].n.WM.mem[0],
+             dut.l3.neuron_gen[0].n.WM.mem[1], dut.l3.neuron_gen[0].n.WM.mem[2],
+             dut.l3.neuron_gen[0].n.WM.mem[3]);
+    $display("L1 n0 biasReg  = %08h", dut.l1.neuron_gen[0].n.biasReg[0]);
+    $display("L3 n0 biasReg  = %08h", dut.l3.neuron_gen[0].n.biasReg[0]);
+    $display("========================");
+  end
+
+  // -------------------------------------------------------------------
+  // Main test sequence
+  // -------------------------------------------------------------------
   initial begin
     in_data = '0;
-    errors = 0; worst = 0; timeouts = 0;
-    fd = $fopen("tb/vectors.txt", "r");
+    errors = 0;
+    worst = 0;
+    timeouts = 0;
+
+    if (!$value$plusargs("VEC=%s", vec_path)) vec_path = "tb/vectors.txt";
+    $display("Opening vector file: %s", vec_path);
+    fd = $fopen(vec_path, "r");
     if (fd == 0) begin
-      $display("FAIL: cannot open vectors.txt");
+      $display("FAIL: cannot open %s", vec_path);
       $finish;
     end
 
@@ -71,7 +97,11 @@ module mlp_vector_tb;
             if (diff > worst) worst = diff;
             if (diff > TOL) begin
               errors++;
-              $display("vec %0d: MISMATCH got %08h exp %08h (diff %0d LSB)", n, out_data, expected, diff);
+              if (n < 5) begin
+                $display("vec %0d: MISMATCH got %08h exp %08h (diff %0d LSB)", n, out_data,
+                         expected, diff);
+                $display("   features: %08h %08h %08h %08h %08h", x[0], x[1], x[2], x[3], x[4]);
+              end
             end
           end
         end
@@ -84,6 +114,7 @@ module mlp_vector_tb;
              n, errors, timeouts, worst, TOL);
     if (errors == 0 && timeouts == 0) $display("PASS");
     else $display("FAIL");
+    $fclose(fd);
     $finish;
   end
 endmodule
