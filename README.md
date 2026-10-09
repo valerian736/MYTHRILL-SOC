@@ -52,9 +52,6 @@ Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** den
 - [Struktur Repository](#struktur-repository)
 - [Cara Build & Jalankan](#cara-build--jalankan)
 - [Hasil Verifikasi](#hasil-verifikasi)
-- [Resource Utilization](#resource-utilization)
-- [Tim](#tim)
-- [Referensi](#referensi)
 
 ---
 
@@ -231,13 +228,9 @@ PASS
 
 ### 2. Demo Hardware (Gowin GW2AR-18 / Tang Nano 20K)
 
-```
-T=24.0 C  RH=95.0 %  Irr=80 W/m2  Wind=10.5 m/s  Hour=12
-F=-0.46 0.07 1.10 -1.31 0.71
-Rain=1.306 mm/h  PWM=1483us  ok=1
-```
+![live output dari putty](<imgs/live inference.png>)
 
-Input tetap `{80 W/m², 12, 95 %, 24 °C, 10.5 km/h}` menghasilkan prediksi **1.306 mm/h**, konsisten dengan hasil fixed-point notebook (1.248 mm/h) dalam toleransi < 5 %.
+pengetesan pada hardware FPGA tang nano 20k untuk mengeluarkan hasil inferensi dengan nilai tetap.Input tetap `{80 W/m², 12, 95 %, 24 °C, 10.5 km/h}` menghasilkan prediksi **1.306 mm/h**, konsisten dengan hasil fixed-point notebook (1.248 mm/h) dalam toleransi < 5 %.
 
 ### 3. Sintesis Quartus Prime
 
