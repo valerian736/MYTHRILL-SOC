@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="MYTHRILL_SOC" T_Register="4360(0)" T_Alu="1297(0)" T_Lut="6315(0)" T_MULT36X36="10(0)" T_Bsram="6(0)" T_Ssram="20(0)">
+ <SubModule name="rst_top" Register="8" Alu="7" Lut="5" T_Register="8(8)" T_Alu="7(7)" T_Lut="5(5)"/>
+ <SubModule name="cpu" T_Register="1067(0)" T_Alu="516(0)" T_Lut="2538(0)" T_Bsram="2(0)">
+  <SubModule name="axi_adapter" Register="4" Lut="20" T_Register="4(4)" T_Lut="20(20)"/>
+  <SubModule name="picorv32_core" Register="608" Alu="374" Lut="1840" Bsram="2" T_Register="1063(608)" T_Alu="516(374)" T_Lut="2518(1840)" T_Bsram="2(2)">
+   <SubModule name="pcpi_mul" Register="255" Alu="78" Lut="334" T_Register="255(255)" T_Alu="78(78)" T_Lut="334(334)"/>
+   <SubModule name="pcpi_div" Register="200" Alu="64" Lut="344" T_Register="200(200)" T_Alu="64(64)" T_Lut="344(344)"/>
+  </SubModule>
+ </SubModule>
+ <SubModule name="xbar" Lut="33" T_Lut="33(33)"/>
+ <SubModule name="bram" Register="2" Lut="14" Bsram="4" T_Register="2(2)" T_Lut="14(14)" T_Bsram="4(4)"/>
+ <SubModule name="gpio" Register="4" Lut="8" T_Register="4(4)" T_Lut="8(8)"/>
+ <SubModule name="pwm" Register="19" Lut="16" T_Register="48(19)" T_Alu="26(0)" T_Lut="29(16)">
+  <SubModule name="core" Register="29" Alu="26" Lut="13" T_Register="29(29)" T_Alu="26(26)" T_Lut="13(13)"/>
+ </SubModule>
+ <SubModule name="debug_host" Register="20" Lut="17" T_Register="80(20)" T_Alu="7(0)" T_Lut="76(17)">
+  <SubModule name="u_uart" Register="60" Alu="7" Lut="59" T_Register="60(60)" T_Alu="7(7)" T_Lut="59(59)"/>
+ </SubModule>
+ <SubModule name="mlp" Register="457" Lut="716" T_Register="2127(457)" T_Alu="657(0)" T_Lut="2165(716)" T_MULT36X36="10(0)">
+  <SubModule name="scaler" Register="246" Alu="19" Lut="132" MULT36X36="1" T_Register="246(246)" T_Alu="19(19)" T_Lut="132(132)" T_MULT36X36="1(1)"/>
+  <SubModule name="core" T_Register="1424(0)" T_Alu="638(0)" T_Lut="1317(0)" T_MULT36X36="9(0)">
+   <SubModule name="l1" T_Register="467(0)" T_Alu="256(0)" T_Lut="498(0)" T_MULT36X36="4(0)">
+    <SubModule name="neuron_gen[0].n" Register="74" Alu="64" Lut="74" MULT36X36="1" T_Register="122(74)" T_Alu="64(64)" T_Lut="126(74)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="16" Lut="15" T_Register="16(16)" T_Lut="15(15)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+    <SubModule name="neuron_gen[1].n" Register="70" Alu="64" Lut="74" MULT36X36="1" T_Register="113(70)" T_Alu="64(64)" T_Lut="122(74)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="11" Lut="11" T_Register="11(11)" T_Lut="11(11)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+    <SubModule name="neuron_gen[2].n" Register="70" Alu="64" Lut="74" MULT36X36="1" T_Register="116(70)" T_Alu="64(64)" T_Lut="125(74)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="14" Lut="14" T_Register="14(14)" T_Lut="14(14)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+    <SubModule name="neuron_gen[3].n" Register="70" Alu="64" Lut="74" MULT36X36="1" T_Register="116(70)" T_Alu="64(64)" T_Lut="125(74)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="14" Lut="14" T_Register="14(14)" T_Lut="14(14)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+   </SubModule>
+   <SubModule name="ser1" Register="194" Alu="31" Lut="113" T_Register="194(194)" T_Alu="31(31)" T_Lut="113(113)"/>
+   <SubModule name="l2" T_Register="451(0)" T_Alu="256(0)" T_Lut="471(0)" T_MULT36X36="4(0)">
+    <SubModule name="neuron_gen[0].n" Register="73" Alu="64" Lut="72" MULT36X36="1" T_Register="114(73)" T_Alu="64(64)" T_Lut="117(72)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="9" Lut="8" T_Register="9(9)" T_Lut="8(8)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+    <SubModule name="neuron_gen[1].n" Register="69" Alu="64" Lut="71" MULT36X36="1" T_Register="113(69)" T_Alu="64(64)" T_Lut="119(71)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="12" Lut="11" T_Register="12(12)" T_Lut="11(11)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+    <SubModule name="neuron_gen[2].n" Register="69" Alu="64" Lut="71" MULT36X36="1" T_Register="113(69)" T_Alu="64(64)" T_Lut="117(71)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="12" Lut="9" T_Register="12(12)" T_Lut="9(9)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+    <SubModule name="neuron_gen[3].n" Register="69" Alu="64" Lut="72" MULT36X36="1" T_Register="111(69)" T_Alu="64(64)" T_Lut="118(72)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="10" Lut="9" T_Register="10(10)" T_Lut="9(9)"/>
+     <SubModule name="g_relu.s1" Register="32" Lut="37" T_Register="32(32)" T_Lut="37(37)"/>
+    </SubModule>
+   </SubModule>
+   <SubModule name="ser2" Register="194" Alu="31" Lut="113" T_Register="194(194)" T_Alu="31(31)" T_Lut="113(113)"/>
+   <SubModule name="l3" T_Register="118(0)" T_Alu="64(0)" T_Lut="122(0)" T_MULT36X36="1(0)">
+    <SubModule name="neuron_gen[0].n" Register="73" Alu="64" Lut="70" MULT36X36="1" T_Register="118(73)" T_Alu="64(64)" T_Lut="122(70)" T_MULT36X36="1(1)">
+     <SubModule name="WM" Register="13" Lut="10" T_Register="13(13)" T_Lut="10(10)"/>
+     <SubModule name="g_Linear.s1" Register="32" Lut="42" T_Register="32(32)" T_Lut="42(42)"/>
+    </SubModule>
+   </SubModule>
+  </SubModule>
+ </SubModule>
+ <SubModule name="sensors" Register="68" Lut="127" T_Register="1024(68)" T_Alu="84(0)" T_Lut="1447(127)" T_Ssram="20(0)">
+  <SubModule name="p_temp" Register="20" Lut="22" Ssram="5" T_Register="20(20)" T_Lut="22(22)" T_Ssram="5(5)"/>
+  <SubModule name="p_hum" Register="26" Lut="23" Ssram="5" T_Register="26(26)" T_Lut="23(23)" T_Ssram="5(5)"/>
+  <SubModule name="p_irr" Register="16" Lut="18" Ssram="4" T_Register="16(16)" T_Lut="18(18)" T_Ssram="4(4)"/>
+  <SubModule name="p_wind" Register="16" Lut="18" Ssram="4" T_Register="16(16)" T_Lut="18(18)" T_Ssram="4(4)"/>
+  <SubModule name="p_hour" Register="8" Lut="16" Ssram="2" T_Register="8(8)" T_Lut="16(16)" T_Ssram="2(2)"/>
+  <SubModule name="p_irrv" Register="3" T_Register="3(3)"/>
+  <SubModule name="p_windv" Register="3" T_Register="3(3)"/>
+  <SubModule name="poll" Register="48" Alu="14" Lut="135" T_Register="48(48)" T_Alu="14(14)" T_Lut="135(135)"/>
+  <SubModule name="sem228a" Register="155" Alu="23" Lut="155" T_Register="225(155)" T_Alu="35(23)" T_Lut="223(155)">
+   <SubModule name="rs485" Register="70" Alu="12" Lut="68" T_Register="70(70)" T_Alu="12(12)" T_Lut="68(68)"/>
+  </SubModule>
+  <SubModule name="sn3000t" Register="155" Alu="23" Lut="157" T_Register="225(155)" T_Alu="35(23)" T_Lut="225(157)">
+   <SubModule name="rs485" Register="70" Alu="12" Lut="68" T_Register="70(70)" T_Alu="12(12)" T_Lut="68(68)"/>
+  </SubModule>
+  <SubModule name="aht10" Register="124" Lut="134" T_Register="225(124)" T_Lut="350(134)">
+   <SubModule name="aht10" Register="101" Lut="216" T_Register="101(101)" T_Lut="216(216)"/>
+  </SubModule>
+  <SubModule name="ds2331" Register="47" Lut="78" T_Register="141(47)" T_Lut="290(78)">
+   <SubModule name="rtc" Register="94" Lut="212" T_Register="94(94)" T_Lut="212(212)"/>
+  </SubModule>
+ </SubModule>
+</Module>

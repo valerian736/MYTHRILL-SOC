@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ENhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Power Analysis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper { width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td {white-space:pre;  border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.thermal_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.Configure_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table th.label {  min-width: 8%; width: 8%; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#Message" style=" font-size: 16px;">Power Messages</a>
+<ul>
+<li><a href="#Configure_Info" style=" font-size: 14px;">Configure Information</a></li>
+</ul>
+</li>
+<li><a href="#Summary" style=" font-size: 16px;">Power Summary</a>
+<ul>
+<li><a href="#Power_Info" style=" font-size: 14px;">Power Information</a></li>
+<li><a href="#Thermal_Info" style=" font-size: 14px;">Thermal Information</a></li>
+<li><a href="#Supply_Summary" style=" font-size: 14px;">Supply Information</a></li>
+</ul>
+</li>
+<li><a href="#Detail" style=" font-size: 16px;">Power Details</a>
+<ul>
+<li><a href="#By_Block_Type" style=" font-size: 14px;">Power By Block Type</a></li>
+<li><a href="#By_Hierarchy" style=" font-size: 14px;">Power By Hierarchy</a></li>
+<li><a href="#By_Clock_Domain" style=" font-size: 14px;">Power By Clock Domain</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="Message">Power Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>Power Analysis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\impl\gwsynthesis\MYTHRILL_SOC.vg</td>
+</tr>
+<tr>
+<td class="label">Physical Constraints File</td>
+<td>C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MYTHRILL_SOC.cst</td>
+</tr>
+<tr>
+<td class="label">Timing Constraints File</td>
+<td>C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\soc test.sdc</td>
+</tr>
+<tr>
+<td class="label">Tool Version</td>
+<td>V1.9.12.02 (64-bit)</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW2AR-LV18QN88C8/I7</td>
+</tr>
+<tr>
+<td class="label">Device</td>
+<td>GW2AR-18</td>
+</tr>
+<tr>
+<td class="label">Device Version</td>
+<td>C</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Thu Oct  8 22:28:38 2026
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2026 Gowin Semiconductor Corporation. All rights reserved.</td>
+</tr>
+</table>
+<h2><a name="Configure_Info">Configure Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Grade</td>
+<td>Commercial</td>
+</tr>
+<tr>
+<td class="label">Process</td>
+<td>Typical</td>
+</tr>
+<tr>
+<td class="label">Ambient Temperature</td>
+<td>25.000
+</tr>
+<tr>
+<td class="label">Use Custom Theta JA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Heat Sink</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Air Flow</td>
+<td>LFM_0</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta SA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Board Thermal Model</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta JB</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Related Vcd File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Related Saif File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Filter Glitches</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Default IO Toggle Rate</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td class="label">Default Remain Toggle Rate</td>
+<td>0.125</td>
+</tr>
+</table>
+<h1><a name="Summary">Power Summary</a></h1>
+<h2><a name="Power_Info">Power Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Total Power (mW)</td>
+<td>171.450</td>
+</tr>
+<tr>
+<td class="label">Quiescent Power (mW)</td>
+<td>122.800</td>
+</tr>
+<tr>
+<td class="label">Dynamic Power (mW)</td>
+<td>48.650</td>
+</tr>
+</table>
+<h2><a name="Thermal_Info">Thermal Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Junction Temperature</td>
+<td>30.116</td>
+</tr>
+<tr>
+<td class="label">Theta JA</td>
+<td>29.840</td>
+</tr>
+<tr>
+<td class="label">Max Allowed Ambient Temperature</td>
+<td>79.884</td>
+</tr>
+</table>
+<h2><a name="Supply_Summary">Supply Information:</a></h2>
+<table class="summary_table">
+<tr>
+<th class="label">Voltage Source</th>
+<th class="label">Voltage</th>
+<th class="label">Dynamic Current(mA)</th>
+<th class="label">Quiescent Current(mA)</th>
+<th class="label">Power(mW)</th>
+</tr>
+<tr>
+<td>VCC</td>
+<td>1.000</td>
+<td>46.226</td>
+<td>70.000</td>
+<td>116.226</td>
+</tr>
+<tr>
+<td>VCCX</td>
+<td>3.300</td>
+<td>0.367</td>
+<td>15.000</td>
+<td>50.712</td>
+</tr>
+<tr>
+<td>VCCIO33</td>
+<td>3.300</td>
+<td>0.367</td>
+<td>1.000</td>
+<td>4.512</td>
+</tr>
+</table>
+<h1><a name="Detail">Power Details</a></h1>
+<h2><a name="By_Block_Type">Power By Block Type:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Block Type</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Static Power(mW)</th>
+<th class="label">Average Toggle Rate(millions of transitions/sec)</th>
+</tr>
+<tr>
+<td>Logic</td>
+<td>4.894</td>
+<td>NA</td>
+<td>3.374</td>
+</tr>
+<tr>
+<td>IO</td>
+<td>8.592
+<td>5.801
+<td>3.222
+</tr>
+<tr>
+<td>BSRAM</td>
+<td>24.008
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>DSP</td>
+<td>16.949
+<td>NA</td>
+<td>1.630
+</tr>
+</table>
+<h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Hierarchy Entity</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Block Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>MYTHRILL_SOC</td>
+<td>45.852</td>
+<td>45.852(45.852)</td>
+<tr>
+<td>MYTHRILL_SOC/bram/</td>
+<td>15.410</td>
+<td>15.410(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/cpu/</td>
+<td>10.404</td>
+<td>10.404(10.404)</td>
+<tr>
+<td>MYTHRILL_SOC/cpu/axi_adapter/</td>
+<td>0.006</td>
+<td>0.006(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/cpu/picorv32_core/</td>
+<td>10.398</td>
+<td>10.398(0.496)</td>
+<tr>
+<td>MYTHRILL_SOC/cpu/picorv32_core/pcpi_div/</td>
+<td>0.221</td>
+<td>0.221(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/cpu/picorv32_core/pcpi_mul/</td>
+<td>0.275</td>
+<td>0.275(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/debug_host/</td>
+<td>0.045</td>
+<td>0.045(0.038)</td>
+<tr>
+<td>MYTHRILL_SOC/debug_host/u_uart/</td>
+<td>0.038</td>
+<td>0.038(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/gpio/</td>
+<td>0.003</td>
+<td>0.003(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/</td>
+<td>19.213</td>
+<td>19.213(18.957)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/</td>
+<td>18.848</td>
+<td>18.848(18.848)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/</td>
+<td>8.272</td>
+<td>8.272(8.272)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[0].n/</td>
+<td>2.069</td>
+<td>2.069(0.021)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[0].n/WM/</td>
+<td>0.006</td>
+<td>0.006(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[0].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[1].n/</td>
+<td>2.067</td>
+<td>2.067(0.019)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[1].n/WM/</td>
+<td>0.004</td>
+<td>0.004(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[1].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[2].n/</td>
+<td>2.068</td>
+<td>2.068(0.020)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[2].n/WM/</td>
+<td>0.006</td>
+<td>0.006(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[2].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[3].n/</td>
+<td>2.068</td>
+<td>2.068(0.020)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[3].n/WM/</td>
+<td>0.006</td>
+<td>0.006(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l1/neuron_gen[3].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/</td>
+<td>8.263</td>
+<td>8.263(8.263)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[0].n/</td>
+<td>2.066</td>
+<td>2.066(0.018)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[0].n/WM/</td>
+<td>0.003</td>
+<td>0.003(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[0].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[1].n/</td>
+<td>2.066</td>
+<td>2.066(0.019)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[1].n/WM/</td>
+<td>0.005</td>
+<td>0.005(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[1].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[2].n/</td>
+<td>2.066</td>
+<td>2.066(0.019)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[2].n/WM/</td>
+<td>0.004</td>
+<td>0.004(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[2].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[3].n/</td>
+<td>2.066</td>
+<td>2.066(0.018)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[3].n/WM/</td>
+<td>0.004</td>
+<td>0.004(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l2/neuron_gen[3].n/g_relu.s1/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l3/</td>
+<td>2.068</td>
+<td>2.068(2.068)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l3/neuron_gen[0].n/</td>
+<td>2.068</td>
+<td>2.068(0.020)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l3/neuron_gen[0].n/WM/</td>
+<td>0.005</td>
+<td>0.005(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/l3/neuron_gen[0].n/g_Linear.s1/</td>
+<td>0.016</td>
+<td>0.016(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/ser1/</td>
+<td>0.123</td>
+<td>0.123(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/core/ser2/</td>
+<td>0.123</td>
+<td>0.123(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/mlp/scaler/</td>
+<td>0.109</td>
+<td>0.109(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/pwm/</td>
+<td>0.059</td>
+<td>0.059(0.052)</td>
+<tr>
+<td>MYTHRILL_SOC/pwm/core/</td>
+<td>0.052</td>
+<td>0.052(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/rst_top/</td>
+<td>0.016</td>
+<td>0.016(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/</td>
+<td>0.692</td>
+<td>0.692(0.648)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/aht10/</td>
+<td>0.125</td>
+<td>0.125(0.072)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/aht10/aht10_0/</td>
+<td>0.072</td>
+<td>0.072(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/ds2331/</td>
+<td>0.097</td>
+<td>0.097(0.070)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/ds2331/rtc/</td>
+<td>0.070</td>
+<td>0.070(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_hour/</td>
+<td>0.008</td>
+<td>0.008(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_hum/</td>
+<td>0.015</td>
+<td>0.015(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_irr/</td>
+<td>0.011</td>
+<td>0.011(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_irrv/</td>
+<td>0.000</td>
+<td>0.000(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_temp/</td>
+<td>0.014</td>
+<td>0.014(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_wind/</td>
+<td>0.011</td>
+<td>0.011(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/p_windv/</td>
+<td>0.000</td>
+<td>0.000(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/poll/</td>
+<td>0.072</td>
+<td>0.072(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/sem228a/</td>
+<td>0.146</td>
+<td>0.146(0.052)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/sem228a/rs485/</td>
+<td>0.052</td>
+<td>0.052(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/sn3000t/</td>
+<td>0.147</td>
+<td>0.147(0.052)</td>
+<tr>
+<td>MYTHRILL_SOC/sensors/sn3000t/rs485/</td>
+<td>0.052</td>
+<td>0.052(0.000)</td>
+<tr>
+<td>MYTHRILL_SOC/xbar/</td>
+<td>0.009</td>
+<td>0.009(0.000)</td>
+</table>
+<h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Clock Domain</th>
+<th class="label">Clock Frequency(Mhz)</th>
+<th class="label">Total Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>system_clock</td>
+<td>27.000</td>
+<td>45.859</td>
+</tr>
+<tr>
+<td>NO CLOCK DOMAIN</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

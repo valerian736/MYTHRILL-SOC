@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Hierarchy Module Resource</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 14px; }
+div#main_wrapper{ width: 100%; }
+h1 {text-align: center; }
+h1 {margin-top: 36px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { align = "center"; padding: 5px 2px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-color: #dee8f4; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="content">
+<h1>Hierarchy Module Resource</h1>
+<table>
+<tr>
+<th class="label">MODULE NAME</th>
+<th class="label">REG NUMBER</th>
+<th class="label">ALU NUMBER</th>
+<th class="label">LUT NUMBER</th>
+<th class="label">DSP NUMBER</th>
+<th class="label">BSRAM NUMBER</th>
+<th class="label">SSRAM NUMBER</th>
+<th class="label">ROM16 NUMBER</th>
+</tr>
+<tr>
+<td class="label">MYTHRILL_SOC (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--rst_top
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">8</td>
+<td align = "center">7</td>
+<td align = "center">5</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--cpu
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--axi_adapter
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/picorv32.v)</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">20</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--picorv32_core
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/picorv32.v)</td>
+<td align = "center">608</td>
+<td align = "center">374</td>
+<td align = "center">1840</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pcpi_mul
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/picorv32.v)</td>
+<td align = "center">255</td>
+<td align = "center">78</td>
+<td align = "center">334</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--pcpi_div
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/picorv32.v)</td>
+<td align = "center">200</td>
+<td align = "center">64</td>
+<td align = "center">344</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--xbar
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">33</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--bram
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--gpio
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--pwm
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">19</td>
+<td align = "center">-</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--core
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_pwm.sv)</td>
+<td align = "center">29</td>
+<td align = "center">26</td>
+<td align = "center">13</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--debug_host
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">20</td>
+<td align = "center">-</td>
+<td align = "center">17</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--u_uart
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_uart.sv)</td>
+<td align = "center">60</td>
+<td align = "center">7</td>
+<td align = "center">59</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--mlp
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">457</td>
+<td align = "center">-</td>
+<td align = "center">716</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--scaler
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_MLP.sv)</td>
+<td align = "center">246</td>
+<td align = "center">19</td>
+<td align = "center">132</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--core
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_MLP.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--l1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[0].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">74</td>
+<td align = "center">64</td>
+<td align = "center">74</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">15</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[1].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">70</td>
+<td align = "center">64</td>
+<td align = "center">74</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">11</td>
+<td align = "center">-</td>
+<td align = "center">11</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[2].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">70</td>
+<td align = "center">64</td>
+<td align = "center">74</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[3].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">70</td>
+<td align = "center">64</td>
+<td align = "center">74</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">14</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ser1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">194</td>
+<td align = "center">31</td>
+<td align = "center">113</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--l2
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[0].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">73</td>
+<td align = "center">64</td>
+<td align = "center">72</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">9</td>
+<td align = "center">-</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[1].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">69</td>
+<td align = "center">64</td>
+<td align = "center">71</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">12</td>
+<td align = "center">-</td>
+<td align = "center">11</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[2].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">69</td>
+<td align = "center">64</td>
+<td align = "center">71</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">12</td>
+<td align = "center">-</td>
+<td align = "center">9</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[3].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">69</td>
+<td align = "center">64</td>
+<td align = "center">72</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">10</td>
+<td align = "center">-</td>
+<td align = "center">9</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_relu.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ser2
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">194</td>
+<td align = "center">31</td>
+<td align = "center">113</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--l3
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--neuron_gen[0].n
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv)</td>
+<td align = "center">73</td>
+<td align = "center">64</td>
+<td align = "center">70</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--WM
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">13</td>
+<td align = "center">-</td>
+<td align = "center">10</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--g_Linear.s1
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv)</td>
+<td align = "center">32</td>
+<td align = "center">-</td>
+<td align = "center">42</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--sensors
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv)</td>
+<td align = "center">68</td>
+<td align = "center">-</td>
+<td align = "center">127</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_temp
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">20</td>
+<td align = "center">-</td>
+<td align = "center">22</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">5</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_hum
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">26</td>
+<td align = "center">-</td>
+<td align = "center">23</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">5</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_irr
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">18</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_wind
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">18</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_hour
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">8</td>
+<td align = "center">-</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_irrv
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--p_windv
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">3</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--poll
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">48</td>
+<td align = "center">14</td>
+<td align = "center">135</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--sem228a
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">155</td>
+<td align = "center">23</td>
+<td align = "center">155</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rs485
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/rs485_controller.sv)</td>
+<td align = "center">70</td>
+<td align = "center">12</td>
+<td align = "center">68</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--sn3000t
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">155</td>
+<td align = "center">23</td>
+<td align = "center">157</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rs485
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/rs485_controller.sv)</td>
+<td align = "center">70</td>
+<td align = "center">12</td>
+<td align = "center">68</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--aht10
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">124</td>
+<td align = "center">-</td>
+<td align = "center">134</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--aht10
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/aht10_driver.sv)</td>
+<td align = "center">101</td>
+<td align = "center">-</td>
+<td align = "center">216</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ds2331
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv)</td>
+<td align = "center">47</td>
+<td align = "center">-</td>
+<td align = "center">78</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rtc
+ (C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/ds2331_driver.sv)</td>
+<td align = "center">94</td>
+<td align = "center">-</td>
+<td align = "center">212</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

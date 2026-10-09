@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Oct  8 22:11:28 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : MYTHRILL_SOC
+Top-level Entity Name : MYTHRILL_SOC
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 38187
+Total pins : 18
+Total virtual pins : 0
+Total block memory bits : 2,048
+Total DSP Blocks : 30
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

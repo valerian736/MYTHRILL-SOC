@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2AR-18C" package="QFN88" speed="8" partNumber="GW2AR-LV18QN88C8/I7"/>
+    <FileList>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_bram.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_esc.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_gpio.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_interconnect.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_pwm.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_uart.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\i2c.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\mlp_bridge.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP_include.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MYTHRILL-SOC.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\pwm.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\reset_top.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\rs485_controller.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\uart.sv" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\impl\gwsynthesis\MYTHRILL_SOC.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="MYTHRILL_SOC"/>
+        <Option type="vcc" value="1.0"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

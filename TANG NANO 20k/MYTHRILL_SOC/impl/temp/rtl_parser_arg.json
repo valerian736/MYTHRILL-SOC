@@ -1,0 +1,97 @@
+{
+ "Device" : "GW2AR-18C",
+ "Files" : [
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/aht10_driver.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_bram.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_esc.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_gpio.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_interconnect.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_MLP.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_pwm.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_uart.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/ds2331_driver.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/i2c.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/mlp_bridge.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP_include.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/picorv32.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/pwm.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/reset_top.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/rs485_controller.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/uart.sv",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/impl/temp/rtl_parser.result",
+ "Top" : "MYTHRILL_SOC",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

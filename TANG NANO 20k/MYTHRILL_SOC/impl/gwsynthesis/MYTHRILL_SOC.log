@@ -1,0 +1,213 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_bram.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_esc.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_gpio.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_interconnect.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv'
+Analyzing included file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP_include.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv":2)
+Back to file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv":2)
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_pwm.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_uart.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\i2c.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv'
+Analyzing included file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP_include.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":2)
+Back to file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":2)
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\mlp_bridge.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP_include.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MYTHRILL-SOC.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv'
+Analyzing included file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP_include.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":1)
+Back to file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":1)
+Analyzing included file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\mlp_bias.svh'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":2)
+Back to file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":2)
+WARN  (EX3801) : Parameter 'addressWidth' becomes localparam in 'neuron' with formal parameter declaration list("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":30)
+Analyzing included file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\mlp_weight.svh'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":194)
+Back to file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":194)
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\pwm.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\reset_top.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\rs485_controller.sv'
+Analyzing Verilog file 'C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\uart.sv'
+WARN  (EX3073) : Port 'pcpi_valid' remains unconnected for this instance("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MYTHRILL-SOC.sv":115)
+Compiling module 'MYTHRILL_SOC'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MYTHRILL-SOC.sv":11)
+Compiling module 'reset_top'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\reset_top.sv":1)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\reset_top.sv":13)
+WARN  (EX3073) : Port 'mem_la_read' remains unconnected for this instance("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2723)
+Compiling module 'picorv32_axi(BARREL_SHIFTER=1,COMPRESSED_ISA=1,ENABLE_MUL=1,ENABLE_DIV=1,STACKADDR=32'h0000_1000)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2517)
+Compiling module 'picorv32_axi_adapter'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2731)
+Compiling module 'picorv32(ENABLE_COUNTERS=1'b1,ENABLE_COUNTERS64=1'b1,ENABLE_REGS_16_31=1'b1,ENABLE_REGS_DUALPORT=1'b1,TWO_STAGE_SHIFT=1'b1,BARREL_SHIFTER=1'b1,TWO_CYCLE_COMPARE=1'b0,TWO_CYCLE_ALU=1'b0,COMPRESSED_ISA=1'b1,CATCH_MISALIGN=1'b1,CATCH_ILLINSN=1'b1,ENABLE_PCPI=1'b0,ENABLE_MUL=1'b1,ENABLE_FAST_MUL=1'b0,ENABLE_DIV=1'b1,ENABLE_IRQ=1'b0,ENABLE_IRQ_QREGS=1'b1,ENABLE_IRQ_TIMER=1'b1,ENABLE_TRACE=1'b0,REGS_INIT_ZERO=1'b0,MASKED_IRQ=32'b00000000000000000000000000000000,LATCHED_IRQ=32'b11111111111111111111111111111111,PROGADDR_RESET=32'b00000000000000000000000000000000,PROGADDR_IRQ=32'b00000000000000000000000000010000,STACKADDR=32'b00000000000000000001000000000000)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":62)
+Extracting RAM for identifier 'cpuregs'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":203)
+Compiling module 'picorv32_pcpi_mul'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2197)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2299)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2313)
+Compiling module 'picorv32_pcpi_div'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2420)
+WARN  (EX3791) : Expression size 63 truncated to fit in target size 32("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":2499)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":332)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":403)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":956)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":992)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1120)
+WARN  (EX3791) : Expression size 33 truncated to fit in target size 32("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1245)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 1("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1250)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1252)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1252)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1269)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1269)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1315)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1349)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1404)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1426)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1498)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1594)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1628)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1628)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1584)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1731)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1736)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1761)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1767)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1837)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1837)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1842)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1845)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1845)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1850)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1860)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1860)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1885)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1885)
+WARN  (EX3827) : Synthesis - simulation differences may occur when using full_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1902)
+WARN  (EX3826) : Synthesis - simulation differences may occur when using parallel_case directive("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\picorv32.v":1902)
+Compiling module 'axil_interconnect(N=6)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_interconnect.sv":2)
+Compiling module 'axil_bram'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_bram.sv":6)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_bram.sv":31)
+Compiling module 'axil_gpio(GPIO_W=1)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_gpio.sv":7)
+Compiling module 'axil_pwm'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_pwm.sv":8)
+Compiling module 'pwm(PWM_FREQ=50)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\pwm.sv":1)
+Compiling module 'axil_uart'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_uart.sv":11)
+Compiling module 'uart(PARITY_EN=1'b0,PARITY_EO=1'b1)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\uart.sv":3)
+Compiling module 'axil_mlp'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv":22)
+Compiling module 'mlp_bridge(B_TEMP=32'sb11111111110011100000000000000000)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\mlp_bridge.sv":19)
+Compiling module 'MLP'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":18)
+Compiling module 'layer(NN=4,numWeight=5,dataWidth=32,weightIntWidth=16)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":233)
+Compiling module 'neuron(layerNo=1,numWeight=5,dataWidth=32,weightIntWidth=16,biasFile="b_1_0.mem",weightFile="w_1_0.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+Compiling module 'relu(data_width=32,weightIntwidth=16)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":218)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'neuron(layerNo=1,neuronNo=1,numWeight=5,dataWidth=32,weightIntWidth=16,biasFile="b_1_1.mem",weightFile="w_1_1.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(neuron=1)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'neuron(layerNo=1,neuronNo=2,numWeight=5,dataWidth=32,weightIntWidth=16,biasFile="b_1_2.mem",weightFile="w_1_2.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(neuron=2)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'neuron(layerNo=1,neuronNo=3,numWeight=5,dataWidth=32,weightIntWidth=16,biasFile="b_1_3.mem",weightFile="w_1_3.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(neuron=3)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'serializer(W=32)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":180)
+Compiling module 'layer(NN=4,numWeight=4,dataWidth=32,layerNum=2,weightIntWidth=16)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":233)
+Compiling module 'neuron(layerNo=2,numWeight=4,dataWidth=32,weightIntWidth=16,biasFile="b_2_0.mem",weightFile="w_2_0.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(layer=2,weight_depth=4,adress_width=2)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'neuron(layerNo=2,neuronNo=1,numWeight=4,dataWidth=32,weightIntWidth=16,biasFile="b_2_1.mem",weightFile="w_2_1.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(layer=2,neuron=1,weight_depth=4,adress_width=2)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'neuron(layerNo=2,neuronNo=2,numWeight=4,dataWidth=32,weightIntWidth=16,biasFile="b_2_2.mem",weightFile="w_2_2.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(layer=2,neuron=2,weight_depth=4,adress_width=2)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'neuron(layerNo=2,neuronNo=3,numWeight=4,dataWidth=32,weightIntWidth=16,biasFile="b_2_3.mem",weightFile="w_2_3.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(layer=2,neuron=3,weight_depth=4,adress_width=2)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+Compiling module 'layer(NN=1,numWeight=4,dataWidth=32,layerNum=3,weightIntWidth=16,actType="linear")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\MLP.sv":233)
+Compiling module 'neuron(layerNo=3,numWeight=4,dataWidth=32,weightIntWidth=16,actType="linear",biasFile="b_3_0.mem",weightFile="w_3_0.mem")'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":5)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":63)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":96)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":115)
+WARN  (EX3791) : Expression size 65 truncated to fit in target size 64("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":123)
+Compiling module 'weight_rom(layer=3,weight_depth=4,adress_width=2)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":181)
+Extracting RAM for identifier 'mem'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":196)
+Compiling module 'linear(data_width=32,weightIntwidth=16)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":241)
+WARN  (EX1998) : Net 'biasReg[0][31]' does not have a driver("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\neuron.sv":42)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_MLP.sv":190)
+Compiling module 'axi_sensor_controller'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv":19)
+Compiling module 'sync_pipe(W=20)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv":269)
+Compiling module 'sync_pipe(W=16)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv":269)
+Compiling module 'sync_pipe(W=8)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv":269)
+Compiling module 'sync_pipe'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv":269)
+Compiling module 'sensor_poll_timer'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axi_sensor_controller.sv":230)
+Compiling module 'rs485_controller'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\rs485_controller.sv":1)
+Compiling module 'uart(BAUD_RATE=4800,PARITY_EN=1'b0,PARITY_EO=1'b1)'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\uart.sv":3)
+Compiling module 'aht10_driver'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv":1)
+Compiling module 'i2c'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\i2c.sv":1)
+WARN  (EX3791) : Expression size 23 truncated to fit in target size 22("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv":91)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv":101)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv":134)
+WARN  (EX3791) : Expression size 23 truncated to fit in target size 22("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv":165)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\aht10_driver.sv":169)
+Compiling module 'ds2331_driver'("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv":1)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 23("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv":76)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv":86)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 23("C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv":121)
+NOTE  (EX0101) : Current top module is "MYTHRILL_SOC"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\impl\gwsynthesis\MYTHRILL_SOC.vg" completed
+[100%] Generate report file "C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\impl\gwsynthesis\MYTHRILL_SOC_syn.rpt.html" completed
+GowinSynthesis finish
