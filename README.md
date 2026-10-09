@@ -19,6 +19,31 @@ Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** den
 
 ---
 
+## Tim
+
+| Nama                       | Peran                     | Kontak                      |
+| -------------------------- | ------------------------- | --------------------------- |
+| **Valerian Shean Tenedy**  | Desain RTL, integrasi SoC | valerian.tenedy@binus.ac.id |
+| **Ryan Reagan Dharmajaya** | Verifikasi, testbench     | ryan.dharmajaya@binus.ac.id |
+
+**Dosen Pembimbing**: Daniel Patricko Gemeno Hutabarat, S.T., M.T. — Universitas Bina Nusantara
+
+---
+
+## Resource Utilization
+
+### Cyclone V SE (DE10-Nano target)
+
+| Resource         | Usage     | Capacity      | %     |
+| ---------------- | --------- | ------------- | ----- |
+| ALM              | 23,688    | 41,910        | 57 %  |
+| Register (FF)    | 37,332    | 41,915        | 89 %  |
+| Block RAM (M10K) | 2,048 bit | 5,662,720 bit | < 1 % |
+| DSP Block        | 30        | 112           | 27 %  |
+| Pin              | 18        | 314           | 6 %   |
+
+---
+
 ## Daftar Isi
 
 - [Arsitektur Sistem](#arsitektur-sistem)
@@ -228,27 +253,5 @@ Total DSP blocks            : 30 / 112 (27 %)
 Total pins                  : 18 / 314 (6 %)
 ```
 
----
 
-## Resource Utilization
 
-### Cyclone V SE (DE10-Nano target)
-
-| Resource         | Usage     | Capacity      | %     |
-| ---------------- | --------- | ------------- | ----- |
-| ALM              | 23,688    | 41,910        | 57 %  |
-| Register (FF)    | 37,332    | 41,915        | 89 %  |
-| Block RAM (M10K) | 2,048 bit | 5,662,720 bit | < 1 % |
-| DSP Block        | 30        | 112           | 27 %  |
-| Pin              | 18        | 314           | 6 %   |
-
----
-
-## Tim
-
-| Nama                       | Peran                     | Kontak                      |
-| -------------------------- | ------------------------- | --------------------------- |
-| **Valerian Shean Tenedy**  | Desain RTL, integrasi SoC | valerian.tenedy@binus.ac.id |
-| **Ryan Reagan Dharmajaya** | Verifikasi, testbench     | ryan.dharmajaya@binus.ac.id |
-
-**Dosen Pembimbing**: Daniel Patricko Gemeno Hutabarat, S.T., M.T. — Universitas Bina Nusantara
