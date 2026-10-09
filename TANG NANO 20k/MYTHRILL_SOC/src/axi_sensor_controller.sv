@@ -10,11 +10,7 @@
 //   0x18 POLL   rw  RS485 poll period in ms (default 1000)
 //   0x1C IRR_DBG  r {rx0[7:0], tx_cnt[7:0], rx_cnt[3:0], flags[3:0]}
 //   0x20 WIND_DBG r same. flags: bit0 timeout, bit1 uart err, bit2 bad frame, bit3 request sent
-//
-// Raw values also leave on ports for direct hardware use (MLP block).
-// Every sensor value passes a 3-stage register pipe (sync + pipelining).
-// Valid pulses use the same delay so they stay aligned with data.
-// AHT10 and DS3231 each have their own I2C master and bus.
+
 
 module axi_sensor_controller #(
     parameter int CLK_FREQ  = 27_000_000,

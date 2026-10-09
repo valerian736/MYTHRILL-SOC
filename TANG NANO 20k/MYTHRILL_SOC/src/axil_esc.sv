@@ -7,9 +7,7 @@
 //   0x0  CTRL    bit0 = enable                (rw)   0 -> output low, no signal
 //   0x4  PERIOD  frame period in us           (rw)   reset: 20000 (50 Hz)
 //   0x8  PULSE   pulse width in us            (rw)   reset: 1000 (zero throttle)
-//
-// Safety: hardware clamps the pulse to MIN_US..MAX_US, whatever software writes.
-// Reset state: output low. Motor cannot spin before software enables it.
+
 
 module axil_esc #(
     parameter int CLK_FREQ = 27_000_000,

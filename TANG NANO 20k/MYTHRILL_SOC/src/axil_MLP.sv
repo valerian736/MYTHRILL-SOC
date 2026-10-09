@@ -14,10 +14,7 @@
 // 0x1C    FEAT3     rw
 // 0x20    FEAT4     rw
 // 0x24    MLP_SRC   rw      bit0: 1 = features from sensor bridge (default), 0 = FEAT regs
-// 0x28-0x38 SNAP0-4   r       features the last inference used (Q16.16), debug
-//
-// Sensor path: raw sensor values -> scaler (mlp_bridge, inside this block)
-// -> start pulse + features. Features are snapshotted at start.
+
 
 module axil_mlp #(
     parameter int AFRAC = 30,
@@ -51,7 +48,6 @@ module axil_mlp #(
     output logic        rvalid,
     input  logic        rready,
 
-    // raw sensor inputs (scaler is inside this block)
     input logic [19:0] temp_raw,
     input logic [19:0] hum_raw,
     input logic [15:0] irr_raw,

@@ -1,7 +1,4 @@
 `default_nettype wire
-// AXI4-Lite BRAM slave. Holds firmware.
-// Memory write and read are in their own always_ff without reset,
-// so synthesis tools can infer block RAM.
 
 module axil_bram #(
     parameter int    WORDS = 1024,           // 4 KB

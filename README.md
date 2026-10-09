@@ -35,3 +35,220 @@ Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** den
 
 ## Arsitektur Sistem
 
+![Arsitektur SoC](imgs/BLOCK%20DIAGRAM.png)
+
+**Alur data**: Sensor → Scaler (normalisasi Q16.16) → MLP → CPU (mapping ke PWM) → ESC → Thruster.
+
+### Komponen Utama
+
+| Blok                       | Fungsi                                                       |
+| -------------------------- | ------------------------------------------------------------ |
+| **PicoRV32**               | CPU soft-core RISC-V RV32IM, AXI4-Lite master                |
+| **ROM / SRAM**             | Memori program (BRAM) dan data                               |
+| **AXI4-Lite Interconnect** | Crossbar untuk semua periferal (6 slave)                     |
+| **MLP Block**              | Akselerator neural network 5→4→4→1, dengan scaler built-in   |
+| **Sensor Controller**      | Aggregator untuk RS485 (SEM228A, SN300) dan I2C (AHT10, RTC) |
+| **PWM**                    | Output untuk ESC (thruster BLDC)                             |
+| **UART**                   | Debug host, 115200 baud                                      |
+| **Security**               | Range check + watchdog pada jalur kritis                     |
+
+### Peta Alamat
+
+| Modul             | Alamat                        |
+| ----------------- | ----------------------------- |
+| Program (BRAM)    | `0x0000_0000` – `0x0000_FFFF` |
+| SRAM              | `0x1000_0000` – `0x1000_FFFF` |
+| PWM               | `0x2000_0000` – `0x2000_FFFF` |
+| UART              | `0x3000_0000` – `0x3000_FFFF` |
+| MLP               | `0x4000_0000` – `0x4000_FFFF` |
+| Sensor Controller | `0x5000_0000` – `0x5000_FFFF` |
+
+---
+
+## Fitur Utama
+
+### 1. Akselerator MLP Hardware
+
+![Arsitektur MLP](imgs/BLOCK%20DIAGRAM%20MLP.png)
+
+- Arsitektur **5 → 4 (ReLU) → 4 (ReLU) → 1 (linear)**
+- Format fixed-point **Q16.16** (32-bit, 16 bit fraksi)
+- Bobot dan bias tersimpan permanen sebagai konstanta ROM (tanpa file I/O saat sintesis)
+- Akumulator 64-bit dengan saturasi hardware
+- Inferensi deterministik, **< 120 siklus clock**
+- **Serializer** antar lapisan mem-pipeline keluaran satu lapisan ke lapisan berikutnya pada setiap siklus clock
+
+### 2. SoC Lengkap dengan PicoRV32
+
+- CPU soft-core **RISC-V RV32IM** (dengan MUL/DIV hardware)
+- Interkoneksi **AXI4-Lite** untuk semua periferal
+- Firmware C ringan (bare-metal) untuk polling sensor, trigger MLP, dan update PWM
+
+### 3. Kontroler Sensor Multi-Protokol
+
+![Kontroler Sensor](imgs/BLOCK%20DIAGRAM%20SENSOR.png)
+
+- **RS485 (Modbus RTU)** untuk SEM228A (iradiansi) dan SN300 (anemometer), dengan verifikasi CRC16
+- **I2C** untuk AHT10 (suhu/kelembapan) dan DS3231 (RTC)
+- Output sensor langsung ke MLP tanpa melewati CPU (jalur hardware langsung)
+
+### 4. Pipeline Sensor (Sinkronisasi Data)
+
+![Pipeline Sensor](imgs/BLOCK%20DIAGRAM%20PIPELINE.png)
+
+Setiap nilai sensor melewati **shift register 3 tahap**. Tujuannya agar sinyal `data` dan `valid` tetap sinkron saat mencapai blok MLP — mengatasi delay kombinasional yang berbeda antara jalur RS485 dan I2C.
+
+
+
+## Blok MLP
+
+### Model
+
+- **Input**: 5 fitur (irradiance, hour, humidity, temperature, wind speed)
+- **Hidden layer 1**: 4 neuron, aktivasi ReLU
+- **Hidden layer 2**: 4 neuron, aktivasi ReLU
+- **Output**: 1 neuron, aktivasi linear
+- **Total parameter**: 49 (Q16.16, hardcoded di ROM)
+
+### Register Periferal MLP
+
+| Register        | Alamat        | Akses | Keterangan                             |
+| --------------- | ------------- | ----- | -------------------------------------- |
+| `MLP_RDY`       | `0x00`        | r     | bit0 = 1 jika hasil valid              |
+| `MLP_OUT`       | `0x04`        | r     | prediksi terakhir (Q16.16)             |
+| `MLP_TRG`       | `0x08`        | w     | tulis bit0 = 1 untuk memulai inferensi |
+| `MLP_INT`       | `0x0C`        | rw    | interval auto-start (clock)            |
+| `FEAT0`–`FEAT4` | `0x10`–`0x20` | rw    | fitur manual (jika `MLP_SRC=0`)        |
+| `MLP_SRC`       | `0x24`        | rw    | 1 = sensor bridge, 0 = FEAT regs       |
+
+### Verifikasi Numerik
+
+Model Q16.16 dibandingkan dengan Keras floating-point:
+
+```
+Input: [80 W/m², jam 12, 95 % RH, 24 °C, 10.5 km/h]
+Keras: 1.2483971 mm/h
+Fixed: 1.2483673 mm/h
+Diff:  0.00003 mm/h  (< 0.003%)
+```
+
+Testbench menguji **100 vektor** dari dataset:
+
+```
+vectors run: 100 | mismatches: 0 | timeouts: 0 | worst diff: 0 LSB (tol 2)
+PASS
+```
+
+
+## Cara Build & Jalankan
+
+### Prasyarat
+
+- **Intel Quartus Prime Lite 25.1** (target Cyclone V / DE10-Nano)
+- **Gowin EDA** (target GW2AR-18 / Tang Nano 20K)
+- **Icarus Verilog** + **GTKWave** (simulasi)
+- **RISC-V toolchain** `riscv64-unknown-elf-gcc` (kompilasi firmware)
+
+### Simulasi RTL (Verifikasi MLP)
+
+```bash
+cd tb/
+iverilog -g2012 -o mlp_sim.vvp \
+    -I ../src \
+    ../src/*.sv ../src/*.v \
+    mlp_vector_tb.sv
+
+vvp mlp_sim.vvp
+# Expected output: PASS, 0 mismatches, 0 timeouts
+```
+
+Lihat waveform:
+```bash
+gtkwave mlp_sim.vcd
+```
+
+### Build untuk DE10-Nano (Cyclone V)
+
+1. Buka Quartus Prime Lite
+2. **File → Open Project → `DE10-NANO/MYTHRILL_SOC.qpf`**
+3. **Processing → Start Compilation**
+4. Hasil: `output_files/MYTHRILL_SOC.sof`
+5. **Tools → Programmer** → pilih `.sof` → **Start**
+
+### Build untuk Tang Nano 20K (Gowin)
+
+1. Buka Gowin EDA
+2. Buka project `GOWIN/MYTHRILL_SOC.gprj`
+3. **Synthesize → Place & Route → Program Device**
+4. Pastikan top module di-set ke `MYTHRILL_SOC`
+
+### Kompilasi Firmware
+
+```bash
+cd firmware/
+riscv64-unknown-elf-gcc -march=rv32im -mabi=ilp32 \
+    -Os -nostdlib -T linker.ld \
+    -o firmware.elf main.c
+
+riscv64-unknown-elf-objcopy -O verilog firmware.elf firmware.hex
+```
+
+---
+
+## Hasil Verifikasi
+
+### 1. Verifikasi RTL vs Keras (100 vektor)
+
+```
+vectors run: 100 | mismatches: 0 | timeouts: 0 | worst diff: 0 LSB (tol 2)
+PASS
+```
+
+### 2. Demo Hardware (Gowin GW2AR-18 / Tang Nano 20K)
+
+```
+T=24.0 C  RH=95.0 %  Irr=80 W/m2  Wind=10.5 m/s  Hour=12
+F=-0.46 0.07 1.10 -1.31 0.71
+Rain=1.306 mm/h  PWM=1483us  ok=1
+```
+
+Input tetap `{80 W/m², 12, 95 %, 24 °C, 10.5 km/h}` menghasilkan prediksi **1.306 mm/h**, konsisten dengan hasil fixed-point notebook (1.248 mm/h) dalam toleransi < 5 %.
+
+### 3. Sintesis Quartus Prime
+
+```
+Quartus Prime 25.1std.0 Lite Edition
+Device: 5CSEBA6U23C7 (Cyclone V SE)
+Status: Successful — 0 errors
+
+Logic utilization (in ALMs) : 23,688 / 41,910 (57 %)
+Total registers             : 37,332
+Total block memory bits     : 2,048 / 5,662,720 (< 1 %)
+Total DSP blocks            : 30 / 112 (27 %)
+Total pins                  : 18 / 314 (6 %)
+```
+
+---
+
+## Resource Utilization
+
+### Cyclone V SE (DE10-Nano target)
+
+| Resource         | Usage     | Capacity      | %     |
+| ---------------- | --------- | ------------- | ----- |
+| ALM              | 23,688    | 41,910        | 57 %  |
+| Register (FF)    | 37,332    | 41,915        | 89 %  |
+| Block RAM (M10K) | 2,048 bit | 5,662,720 bit | < 1 % |
+| DSP Block        | 30        | 112           | 27 %  |
+| Pin              | 18        | 314           | 6 %   |
+
+---
+
+## Tim
+
+| Nama                       | Peran                     | Kontak                      |
+| -------------------------- | ------------------------- | --------------------------- |
+| **Valerian Shean Tenedy**  | Desain RTL, integrasi SoC | valerian.tenedy@binus.ac.id |
+| **Ryan Reagan Dharmajaya** | Verifikasi, testbench     | ryan.dharmajaya@binus.ac.id |
+
+**Dosen Pembimbing**: Daniel Patricko Gemeno Hutabarat, S.T., M.T. — Universitas Bina Nusantara
