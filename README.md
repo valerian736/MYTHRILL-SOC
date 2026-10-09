@@ -178,17 +178,7 @@ pengetesan pada hardware FPGA tang nano 20k untuk mengeluarkan hasil inferensi d
 
 ### 3. Sintesis Quartus Prime
 
-```
-Quartus Prime 25.1std.0 Lite Edition
-Device: 5CSEBA6U23C7 (Cyclone V SE)
-Status: Successful — 0 errors
-
-Logic utilization (in ALMs) : 23,688 / 41,910 (57 %)
-Total registers             : 37,332
-Total block memory bits     : 2,048 / 5,662,720 (< 1 %)
-Total DSP blocks            : 30 / 112 (27 %)
-Total pins                  : 18 / 314 (6 %)
-```
+![sintesis RTL pada quartus prime](<imgs/synthesis quartus prime.png>)
 
 
 ## Cara Build & Jalankan
