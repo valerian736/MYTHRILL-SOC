@@ -161,62 +161,6 @@ vectors run: 100 | mismatches: 0 | timeouts: 0 | worst diff: 0 LSB (tol 2)
 PASS
 ```
 
-
-## Cara Build & Jalankan
-
-### Prasyarat
-
-- **Intel Quartus Prime Lite 25.1** (target Cyclone V / DE10-Nano)
-- **Gowin EDA** (target GW2AR-18 / Tang Nano 20K)
-- **Icarus Verilog** + **GTKWave** (simulasi)
-- **RISC-V toolchain** `riscv64-unknown-elf-gcc` (kompilasi firmware)
-
-### Simulasi RTL (Verifikasi MLP)
-
-```bash
-cd tb/
-iverilog -g2012 -o mlp_sim.vvp \
-    -I ../src \
-    ../src/*.sv ../src/*.v \
-    mlp_vector_tb.sv
-
-vvp mlp_sim.vvp
-# Expected output: PASS, 0 mismatches, 0 timeouts
-```
-
-Lihat waveform:
-```bash
-gtkwave mlp_sim.vcd
-```
-
-### Build untuk DE10-Nano (Cyclone V)
-
-1. Buka Quartus Prime Lite
-2. **File → Open Project → `DE10-NANO/MYTHRILL_SOC.qpf`**
-3. **Processing → Start Compilation**
-4. Hasil: `output_files/MYTHRILL_SOC.sof`
-5. **Tools → Programmer** → pilih `.sof` → **Start**
-
-### Build untuk Tang Nano 20K (Gowin)
-
-1. Buka Gowin EDA
-2. Buka project `GOWIN/MYTHRILL_SOC.gprj`
-3. **Synthesize → Place & Route → Program Device**
-4. Pastikan top module di-set ke `MYTHRILL_SOC`
-
-### Kompilasi Firmware
-
-```bash
-cd firmware/
-riscv64-unknown-elf-gcc -march=rv32im -mabi=ilp32 \
-    -Os -nostdlib -T linker.ld \
-    -o firmware.elf main.c
-
-riscv64-unknown-elf-objcopy -O verilog firmware.elf firmware.hex
-```
-
----
-
 ## Hasil Verifikasi
 
 ### 1. Verifikasi RTL vs Keras (100 vektor)
@@ -245,6 +189,47 @@ Total block memory bits     : 2,048 / 5,662,720 (< 1 %)
 Total DSP blocks            : 30 / 112 (27 %)
 Total pins                  : 18 / 314 (6 %)
 ```
+
+
+## Cara Build & Jalankan
+
+### Kompilasi Firmware
+
+kompilasi firmware dijanlan melalui linux wsl subsystem pada windows dengan toolchain-riscv
+
+```makefile
+
+CROSS ?= $(shell command -v riscv64-unknown-elf-gcc >/dev/null 2>&1 && echo riscv64-unknown-elf- || echo riscv64-linux-gnu-)
+DELAY ?= 2000000
+WORDS ?= 1024     
+
+CFLAGS = -march=rv32imc_zicsr -mabi=ilp32 -O1 \
+         -ffreestanding -nostdlib -static -fno-pie -no-pie \
+         -fno-asynchronous-unwind-tables -fno-unwind-tables \
+         -Wall -DDELAY=$(DELAY)
+LDFLAGS = -T link.ld -Wl,-melf32lriscv -Wl,--gc-sections
+
+all: firmware.hex
+	$(CROSS)size firmware.elf
+
+firmware.elf: start.S main.c link.ld
+	$(CROSS)gcc $(CFLAGS) $(LDFLAGS) -o $@ start.S main.c
+
+firmware.bin: firmware.elf
+	$(CROSS)objcopy -O binary $< $@
+
+firmware.hex: firmware.bin makehex.py
+	python3 makehex.py $< $(WORDS) > $@
+
+clean:
+	rm -f firmware.elf firmware.bin firmware.hex
+
+.PHONY: all clean
+```
+
+---
+
+
 
 
 
