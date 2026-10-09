@@ -14,7 +14,7 @@ module MYTHRILL_SOC #(
     parameter int UART_BAUD = 115200
 ) (
     input logic clk,
-    input logic reset,  
+    input logic reset,
     output logic trap,
     output logic [GPIO_W-1:0] gpio_out,
     input logic [GPIO_W-1:0] gpio_in,

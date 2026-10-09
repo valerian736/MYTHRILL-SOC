@@ -1,13 +1,5 @@
 [
  {
-  "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_esc.sv",
-  "InstLine" : 14,
-  "InstName" : "axil_esc",
-  "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_esc.sv",
-  "ModuleLine" : 14,
-  "ModuleName" : "axil_esc"
- },
- {
   "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv",
   "InstLine" : 11,
   "InstName" : "MYTHRILL_SOC",
@@ -80,7 +72,7 @@
     "InstLine" : 158,
     "InstName" : "bram",
     "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_bram.sv",
-    "ModuleLine" : 6,
+    "ModuleLine" : 3,
     "ModuleName" : "axil_bram"
    },
    {
@@ -132,12 +124,12 @@
     "InstLine" : 258,
     "InstName" : "mlp",
     "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_MLP.sv",
-    "ModuleLine" : 20,
+    "ModuleLine" : 19,
     "ModuleName" : "axil_mlp",
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_MLP.sv",
-      "InstLine" : 93,
+      "InstLine" : 91,
       "InstName" : "scaler",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/mlp_bridge.sv",
       "ModuleLine" : 19,
@@ -145,7 +137,7 @@
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_MLP.sv",
-      "InstLine" : 117,
+      "InstLine" : 115,
       "InstName" : "core",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
       "ModuleLine" : 18,
@@ -161,7 +153,7 @@
         "SubInsts" : [
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[0].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -169,25 +161,25 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
          },
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[1].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -195,25 +187,25 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
          },
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[2].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -221,25 +213,25 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
          },
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[3].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -247,18 +239,18 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
@@ -283,7 +275,7 @@
         "SubInsts" : [
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[0].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -291,25 +283,25 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
          },
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[1].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -317,25 +309,25 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
          },
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[2].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -343,25 +335,25 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
          },
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[3].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -369,18 +361,18 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 166,
+            "InstLine" : 165,
             "InstName" : "g_relu.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 218,
+            "ModuleLine" : 216,
             "ModuleName" : "relu"
            }
           ]
@@ -405,7 +397,7 @@
         "SubInsts" : [
          {
           "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/MLP.sv",
-          "InstLine" : 292,
+          "InstLine" : 265,
           "InstName" : "neuron_gen[0].n",
           "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
           "ModuleLine" : 5,
@@ -413,18 +405,18 @@
           "SubInsts" : [
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 144,
+            "InstLine" : 143,
             "InstName" : "WM",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 181,
+            "ModuleLine" : 180,
             "ModuleName" : "weight_rom"
            },
            {
             "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "InstLine" : 156,
+            "InstLine" : 155,
             "InstName" : "g_Linear.s1",
             "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/neuron.sv",
-            "ModuleLine" : 241,
+            "ModuleLine" : 239,
             "ModuleName" : "linear"
            }
           ]
@@ -445,71 +437,71 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 67,
+      "InstLine" : 70,
       "InstName" : "p_temp",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 68,
+      "InstLine" : 79,
       "InstName" : "p_hum",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 69,
+      "InstLine" : 88,
       "InstName" : "p_irr",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 70,
+      "InstLine" : 97,
       "InstName" : "p_wind",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 71,
+      "InstLine" : 106,
       "InstName" : "p_hour",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 72,
+      "InstLine" : 115,
       "InstName" : "p_irrv",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 73,
+      "InstLine" : 124,
       "InstName" : "p_windv",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 265,
+      "ModuleLine" : 320,
       "ModuleName" : "sync_pipe"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 154,
+      "InstLine" : 209,
       "InstName" : "poll",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "ModuleLine" : 226,
+      "ModuleLine" : 281,
       "ModuleName" : "sensor_poll_timer"
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 163,
+      "InstLine" : 218,
       "InstName" : "sem228a",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/rs485_controller.sv",
       "ModuleLine" : 1,
@@ -527,7 +519,7 @@
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 181,
+      "InstLine" : 236,
       "InstName" : "sn3000t",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/rs485_controller.sv",
       "ModuleLine" : 1,
@@ -545,7 +537,7 @@
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 200,
+      "InstLine" : 255,
       "InstName" : "aht10",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/aht10_driver.sv",
       "ModuleLine" : 1,
@@ -563,7 +555,7 @@
      },
      {
       "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv",
-      "InstLine" : 213,
+      "InstLine" : 268,
       "InstName" : "ds2331",
       "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/ds2331_driver.sv",
       "ModuleLine" : 1,
@@ -582,6 +574,14 @@
     ]
    }
   ]
+ },
+ {
+  "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_esc.sv",
+  "InstLine" : 12,
+  "InstName" : "axil_esc",
+  "ModuleFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/axil_esc.sv",
+  "ModuleLine" : 12,
+  "ModuleName" : "axil_esc"
  },
  {
   "InstFile" : "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/TANG NANO 20k/MYTHRILL_SOC/src/picorv32.v",

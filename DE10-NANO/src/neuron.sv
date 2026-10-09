@@ -41,7 +41,7 @@ module neuron #(
   reg wen;
   wire ren;
   reg [addressWidth-1:0] w_addr;
-  reg [addressWidth:0]   r_addr;
+  reg [addressWidth:0] r_addr;
   reg [dataWidth-1:0] w_in;
   wire [dataWidth-1:0] w_out;
   reg [2*dataWidth-1:0] mul;
@@ -168,7 +168,7 @@ module weight_rom #(
     input  logic                    clk,
     input  logic                    read_en,
     input  logic [adress_width-1:0] read_addr,
-    output logic [data_width-1:0]   dout
+    output logic [  data_width-1:0] dout
 );
 
   always_ff @(posedge clk) begin

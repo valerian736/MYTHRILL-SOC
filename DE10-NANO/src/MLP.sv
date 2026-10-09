@@ -141,7 +141,7 @@ module MLP (
   );
 
 
-  assign out_data       = x3_out;
+  assign out_data  = x3_out;
   assign out_valid = o3_valid[0];
 
 endmodule : MLP
@@ -253,31 +253,31 @@ module layer #(
 );
 
 
-generate
-  genvar i;
-  for (i = 0; i < NN; i++) begin : neuron_gen
-    neuron #(
-        .numWeight(numWeight),
-        .layerNo(layerNum),
-        .neuronNo(i),
-        .dataWidth(dataWidth),
-        .weightIntWidth(weightIntWidth),
-        .actType(actType)
-    ) n (
-        .clk(clk),
-        .rst(rst),
-        .myinput(x_in),
-        .weightValid(weightValid),
-        .biasValid(biasValid),
-        .weightValue(weightValue),
-        .biasValue(biasValue),
-        .config_layer_num(config_layer_num),
-        .config_neuron_num(config_neuron_num),
-        .myinputValid(x_valid),
-        .out(x_out[i*dataWidth+:dataWidth]),
-        .outvalid(o_valid[i])
-    );
-  end
-endgenerate
+  generate
+    genvar i;
+    for (i = 0; i < NN; i++) begin : neuron_gen
+      neuron #(
+          .numWeight(numWeight),
+          .layerNo(layerNum),
+          .neuronNo(i),
+          .dataWidth(dataWidth),
+          .weightIntWidth(weightIntWidth),
+          .actType(actType)
+      ) n (
+          .clk(clk),
+          .rst(rst),
+          .myinput(x_in),
+          .weightValid(weightValid),
+          .biasValid(biasValid),
+          .weightValue(weightValue),
+          .biasValue(biasValue),
+          .config_layer_num(config_layer_num),
+          .config_neuron_num(config_neuron_num),
+          .myinputValid(x_valid),
+          .out(x_out[i*dataWidth+:dataWidth]),
+          .outvalid(o_valid[i])
+      );
+    end
+  endgenerate
 
 endmodule : layer

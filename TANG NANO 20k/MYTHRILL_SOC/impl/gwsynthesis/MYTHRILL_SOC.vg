@@ -1,24 +1,24 @@
 //
 //Written by GowinSynthesis
 //Tool Version "V1.9.12.02 (64-bit)"
-//Thu Oct  8 22:26:29 2026
+//Fri Oct  9 11:31:51 2026
 
 //Source file index table:
-//file0 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/aht10_driver.sv"
-//file1 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv"
-//file2 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_bram.sv"
-//file3 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_esc.sv"
-//file4 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_gpio.sv"
-//file5 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_interconnect.sv"
-//file6 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_MLP.sv"
-//file7 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_pwm.sv"
-//file8 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_uart.sv"
-//file9 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/ds2331_driver.sv"
-//file10 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/i2c.sv"
-//file11 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/MLP.sv"
-//file12 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/mlp_bridge.sv"
-//file13 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/MLP_include.sv"
-//file14 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv"
+//file0 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/MLP.sv"
+//file1 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/MLP_include.sv"
+//file2 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/MYTHRILL-SOC.sv"
+//file3 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/aht10_driver.sv"
+//file4 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axi_sensor_controller.sv"
+//file5 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_MLP.sv"
+//file6 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_bram.sv"
+//file7 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_esc.sv"
+//file8 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_gpio.sv"
+//file9 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_interconnect.sv"
+//file10 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_pwm.sv"
+//file11 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/axil_uart.sv"
+//file12 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/ds2331_driver.sv"
+//file13 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/i2c.sv"
+//file14 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/mlp_bridge.sv"
 //file15 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/neuron.sv"
 //file16 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/picorv32.v"
 //file17 "\C:/Users/valer/OneDrive/Documents/BRIN\ STUFF/COMPETITION/TANG\ NANO\ 20k/MYTHRILL_SOC/src/pwm.sv"
@@ -35153,13 +35153,13 @@ defparam m_rdata_29_s0.INIT=8'h8F;
     .I2(m_rdata_30_4) 
 );
 defparam m_rdata_30_s0.INIT=8'h8F;
-  LUT3 m_rdata_31_s0 (
+  LUT3 m_rdata_31_s (
     .F(m_rdata[31]),
     .I0(m_rdata_16_4),
     .I1(\s_rdata[0] [31]),
     .I2(m_rdata_31_4) 
 );
-defparam m_rdata_31_s0.INIT=8'h8F;
+defparam m_rdata_31_s.INIT=8'h8F;
   LUT4 m_rdata_16_s1 (
     .F(m_rdata_16_4),
     .I0(m_araddr[28]),
@@ -35288,14 +35288,14 @@ defparam m_rdata_29_s1.INIT=16'h0777;
     .I3(s_wready_5_3) 
 );
 defparam m_rdata_30_s1.INIT=16'h0777;
-  LUT4 m_rdata_31_s1 (
+  LUT4 m_rdata_31_s0 (
     .F(m_rdata_31_4),
     .I0(\s_rdata[4] [31]),
     .I1(s_wready_4_3),
     .I2(\s_rdata[5] [31]),
     .I3(s_wready_5_3) 
 );
-defparam m_rdata_31_s1.INIT=16'h0777;
+defparam m_rdata_31_s0.INIT=16'h0777;
   VCC VCC_cZ (
     .V(VCC)
 );
@@ -35764,14 +35764,14 @@ module pwm (
   count_6_12,
   resetn,
   duty_reg,
-  pwm_line_Z
+  pwm_line
 )
 ;
 input clk_d;
 input count_6_12;
 input resetn;
 input [7:0] duty_reg;
-output pwm_line_Z;
+output pwm_line;
 wire n171_3;
 wire n138_3;
 wire tick_4;
@@ -36107,7 +36107,7 @@ defparam n60_s5.INIT=16'h7F80;
     .RESET(count_6_12) 
 );
   DFFR pwm_line_s0 (
-    .Q(pwm_line_Z),
+    .Q(pwm_line),
     .D(n138_3),
     .CLK(clk_d),
     .RESET(count_6_12) 
@@ -36426,7 +36426,7 @@ wire n81_9;
 wire n239_6;
 wire n238_5;
 wire enable;
-wire pwm_line_Z;
+wire pwm_line;
 wire [7:0] duty_reg;
 wire VCC;
 wire GND;
@@ -36447,7 +36447,7 @@ defparam s_arready_2_s.INIT=8'h40;
   LUT2 pwm_out_d_s (
     .F(pwm_out_d),
     .I0(enable),
-    .I1(pwm_line_Z) 
+    .I1(pwm_line) 
 );
 defparam pwm_out_d_s.INIT=4'h8;
   LUT4 bvalid_s3 (
@@ -36687,7 +36687,7 @@ defparam rvalid_s1.INIT=1'b0;
     .count_6_12(count_6_12),
     .resetn(resetn),
     .duty_reg(duty_reg[7:0]),
-    .pwm_line_Z(pwm_line_Z)
+    .pwm_line(pwm_line)
 );
   VCC VCC_cZ (
     .V(VCC)

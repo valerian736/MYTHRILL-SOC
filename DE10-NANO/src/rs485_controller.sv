@@ -19,20 +19,20 @@ module rs485_controller #(
     }
 ) (
     //input logic [31:0] MS,
-    input logic tx_trigger,
-    output logic de_re,
-    input logic clk,
-    input logic rstn,
-    input logic rx,
-    output logic tx,
+    input  logic                  tx_trigger,
+    output logic                  de_re,
+    input  logic                  clk,
+    input  logic                  rstn,
+    input  logic                  rx,
+    output logic                  tx,
     output logic [DATA_WIDTH-1:0] data_raw,
-    output logic data_valid,
-    output logic frame_error,
+    output logic                  data_valid,
+    output logic                  frame_error,
     // debug: flags [0] timeout, [1] uart rx error, [2] bad frame/CRC, [3] request sent
-    output logic [3:0] dbg_flags,
-    output logic [3:0] dbg_rx_cnt,  // bytes received in last query
-    output logic [7:0] dbg_tx_cnt,  // queries sent since reset
-    output logic [7:0] dbg_rx0      // first byte received in last query
+    output logic [           3:0] dbg_flags,
+    output logic [           3:0] dbg_rx_cnt,   // bytes received in last query
+    output logic [           7:0] dbg_tx_cnt,   // queries sent since reset
+    output logic [           7:0] dbg_rx0       // first byte received in last query
 );
 
   // ---------------------------------------------------------------
@@ -213,7 +213,7 @@ module rs485_controller #(
             data_raw   <= {rx_frame[3], rx_frame[4]};
             data_valid <= 1'b1;
           end else begin
-            frame_error <= 1'b1;
+            frame_error  <= 1'b1;
             dbg_flags[2] <= 1'b1;
           end
           state <= IDLE;

@@ -4,8 +4,8 @@
 // so synthesis tools can infer block RAM.
 
 module axil_bram #(
-    parameter int    WORDS = 1024,           // 4 KB
-    parameter  INIT  = "firmware.hex"
+    parameter int WORDS = 1024,           // 4 KB
+    parameter     INIT  = "firmware.hex"
 ) (
     input logic clk,
     input logic resetn,
