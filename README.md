@@ -186,6 +186,7 @@ pengetesan pada hardware FPGA tang nano 20k untuk mengeluarkan hasil inferensi d
 ### wsl
 
 [kode firmware dapat ditemukan pada link ini:](https://github.com/valerian736/MYTHRILL-SOC-FIRMWARE)
+
 kompilasi firmware dijanlan melalui linux wsl subsystem pada windows dengan toolchain-riscv
 
 ```makefile
