@@ -24,7 +24,7 @@ Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** den
 | Nama                       | Peran                     | Kontak                      |
 | -------------------------- | ------------------------- | --------------------------- |
 | **Valerian Shean Tenedy**  | Desain RTL, integrasi SoC | valerian.tenedy@binus.ac.id |
-| **Ryan Reagan Dharmajaya** | Verifikasi, testbench     | ryan.dharmajaya@binus.ac.id |
+| **Ryan Reagan Dharmajaya** | Verifikasi, Business Analyst    | ryan.dharmajaya@binus.ac.id |
 
 **Dosen Pembimbing**: Daniel Patricko Gemeno Hutabarat, S.T., M.T. — Universitas Bina Nusantara
 
@@ -181,9 +181,9 @@ pengetesan pada hardware FPGA tang nano 20k untuk mengeluarkan hasil inferensi d
 ![sintesis RTL pada quartus prime](<imgs/synthesis quartus prime.png>)
 
 
-## Cara Build & Jalankan
+## Kompilasi Firmware
 
-### Kompilasi Firmware
+### wsl
 
 kompilasi firmware dijanlan melalui linux wsl subsystem pada windows dengan toolchain-riscv
 
