@@ -24,7 +24,7 @@ Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** den
 | Nama                       | Peran                     | Kontak                      |
 | -------------------------- | ------------------------- | --------------------------- |
 | **Valerian Shean Tenedy**  | Desain RTL, integrasi SoC | valerian.tenedy@binus.ac.id |
-| **Ryan Reagan Dharmajaya** | Verifikasi, testbench     | ryan.dharmajaya@binus.ac.id |
+| **Ryan Reagan Dharmajaya** | Verifikasi     | ryan.dharmajaya@binus.ac.id |
 
 **Dosen Pembimbing**: Daniel Patricko Gemeno Hutabarat, S.T., M.T. — Universitas Bina Nusantara
 
