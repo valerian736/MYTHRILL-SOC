@@ -1,12 +1,7 @@
 `default_nettype wire
-//   picorv32_axi --(AXI4-Lite)--> axil_interconnect --+--> axil_bram (0x0000_0000)
-//                                                     +--> axil_gpio (0x1000_0000)
-//                                                     +--> axil_pwm  (0x2000_0000)
-//                                                     +--> axil_uart (0x3000_0000)
-//                                                     +--> axil_mlp  (0x4000_0000)
-//                                                     +--> axi_sensor_controller (0x5000_0000)
-//
-//   sensors --> (3-stage pipes) --> axil_mlp [scaler + MLP] (direct, no CPU)
+// Valerian Shean Tenedy
+// 2702243571 
+// MYTHRILL-SOC
 
 module MYTHRILL_SOC #(
     parameter int GPIO_W    = 1,
@@ -40,7 +35,7 @@ module MYTHRILL_SOC #(
   localparam int S_MLP = 4;
   localparam int S_SENS = 5;
 
-  // ---------- reset ----------
+ 
 
   logic resetn;
   reset_top rst_top (
@@ -49,7 +44,7 @@ module MYTHRILL_SOC #(
       resetn
   );
 
-  // ---------- CPU master bus ----------
+  
   logic m_awvalid, m_awready;
   logic [31:0] m_awaddr;
   logic [ 2:0] m_awprot;
@@ -63,14 +58,14 @@ module MYTHRILL_SOC #(
   logic m_rvalid, m_rready;
   logic [31:0] m_rdata;
 
-  // ---------- slave buses, index = slave number ----------
+  
   logic [NS-1:0][31:0] s_awaddr, s_wdata, s_araddr, s_rdata;
   logic [NS-1:0][3:0] s_wstrb;
   logic [NS-1:0] s_awvalid, s_awready, s_wvalid, s_wready;
   logic [NS-1:0] s_bvalid, s_bready;
   logic [NS-1:0] s_arvalid, s_arready, s_rvalid, s_rready;
 
-  // ---------- CPU ----------
+  
   picorv32_axi #(
       .PROGADDR_RESET (32'h0000_0000),  // boot from BRAM
       .STACKADDR      (32'h0000_1000),  // top of 4 KB BRAM
@@ -106,7 +101,9 @@ module MYTHRILL_SOC #(
       .mem_axi_rready(m_rready),
       .mem_axi_rdata (m_rdata),
 
-      // unused: tie inputs low, leave outputs open
+  
+  
+  
       .pcpi_wr   (1'b0),
       .pcpi_rd   (32'b0),
       .pcpi_wait (1'b0),
@@ -114,7 +111,7 @@ module MYTHRILL_SOC #(
       .irq       (32'b0)
   );
 
-  // ---------- interconnect ----------
+  
   axil_interconnect #(
       .N(NS)
   ) xbar (
@@ -151,7 +148,7 @@ module MYTHRILL_SOC #(
       .s_rready (s_rready)
   );
 
-  // ---------- slave 0: BRAM ----------
+  
   axil_bram #(
       .WORDS(1024),
       .INIT ("firmware.hex")
@@ -175,7 +172,6 @@ module MYTHRILL_SOC #(
       .rready(s_rready[S_BRAM])
   );
 
-  // ---------- slave 1: GPIO ----------
   axil_gpio #(
       .GPIO_W(GPIO_W)
   ) gpio (
@@ -200,7 +196,6 @@ module MYTHRILL_SOC #(
       .gpio_in(gpio_in)
   );
 
-  // ---------- slave 2: PWM ----------
   axil_pwm pwm (
       .clk(clk),
       .resetn(resetn),
@@ -222,7 +217,7 @@ module MYTHRILL_SOC #(
       .pwm_out(pwm_out)
   );
 
-  // ---------- slave 3: UART ----------
+
   axil_uart #(
       .BAUD_RATE(UART_BAUD),
       .CLK_FREQ (CLK_FREQ)
@@ -248,13 +243,13 @@ module MYTHRILL_SOC #(
       .tx(uart_tx)
   );
 
-  // ---------- sensor -> MLP direct path ----------
+  
   logic [19:0] temp_raw, hum_raw;
   logic [15:0] irr_raw, wind_raw;
   logic [7:0] hour_raw;
   logic irr_valid, wind_valid;
 
-  // ---------- slave 4: MLP ----------
+  
   axil_mlp mlp (
       .clk(clk),
       .resetn(resetn),
@@ -282,7 +277,7 @@ module MYTHRILL_SOC #(
       .wind_valid(wind_valid)
   );
 
-  // ---------- slave 5: sensors ----------
+  
   axi_sensor_controller #(
       .CLK_FREQ(CLK_FREQ)
   ) sensors (

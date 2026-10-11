@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Oct  8 22:32:18 2026
+Fitter Status : Successful - Sun Oct 11 21:48:04 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : MYTHRILL_SOC
 Top-level Entity Name : MYTHRILL_SOC
 Family : Cyclone V
 Device : 5CSEBA6U23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 23,688 / 41,910 ( 57 % )
-Total registers : 37332
+Logic utilization (in ALMs) : 22,361 / 41,910 ( 53 % )
+Total registers : 37325
 Total pins : 18 / 314 ( 6 % )
 Total virtual pins : 0
 Total block memory bits : 2,048 / 5,662,720 ( < 1 % )

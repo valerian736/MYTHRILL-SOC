@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MYTHRILL_SOC
-Thu Oct  8 22:35:41 2026
+Sun Oct 11 21:50:30 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Oct  8 22:35:41 2026 ;
+; EDA Netlist Writer Status ; Successful - Sun Oct 11 21:50:30 2026 ;
 ; Revision Name             ; MYTHRILL_SOC                          ;
 ; Top-level Entity Name     ; MYTHRILL_SOC                          ;
 ; Family                    ; Cyclone V                             ;
@@ -81,13 +81,13 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Thu Oct  8 22:35:31 2026
+    Info: Processing started: Sun Oct 11 21:50:22 2026
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off MYTHRILL_SOC -c MYTHRILL_SOC
 Info (204019): Generated file MYTHRILL_SOC.vo in folder "C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 5222 megabytes
-    Info: Processing ended: Thu Oct  8 22:35:41 2026
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Sun Oct 11 21:50:31 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
 
 

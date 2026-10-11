@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MYTHRILL_SOC
-Thu Oct  8 22:11:29 2026
+Sun Oct 11 21:35:08 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -132,7 +132,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct  8 22:11:28 2026           ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 11 21:35:07 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; MYTHRILL_SOC                                    ;
 ; Top-level Entity Name           ; MYTHRILL_SOC                                    ;
@@ -301,13 +301,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 26509     ;
+; Estimate of Logic utilization (ALMs needed) ; 26510     ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 25492     ;
-;     -- 7 input functions                    ; 464       ;
-;     -- 6 input functions                    ; 11961     ;
-;     -- 5 input functions                    ; 847       ;
-;     -- 4 input functions                    ; 4820      ;
+; Combinational ALUT usage for logic          ; 25495     ;
+;     -- 7 input functions                    ; 463       ;
+;     -- 6 input functions                    ; 11963     ;
+;     -- 5 input functions                    ; 848       ;
+;     -- 4 input functions                    ; 4821      ;
 ;     -- <=3 input functions                  ; 7400      ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 38187     ;
@@ -320,7 +320,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 38251     ;
-; Total fan-out                               ; 229934    ;
+; Total fan-out                               ; 229945    ;
 ; Average fan-out                             ; 3.60      ;
 +---------------------------------------------+-----------+
 
@@ -330,15 +330,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                          ; Entity Name           ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |MYTHRILL_SOC                                ; 25492 (1)           ; 38187 (0)                 ; 2048              ; 30         ; 18   ; 0            ; |MYTHRILL_SOC                                                                                                                                ; MYTHRILL_SOC          ; work         ;
-;    |axi_sensor_controller:sensors|           ; 1105 (90)           ; 1160 (68)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors                                                                                                  ; axi_sensor_controller ; work         ;
-;       |aht10_driver:aht10|                   ; 297 (108)           ; 225 (124)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|aht10_driver:aht10                                                                               ; aht10_driver          ; work         ;
-;          |i2c:aht10|                         ; 189 (189)           ; 101 (101)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|aht10_driver:aht10|i2c:aht10                                                                     ; i2c                   ; work         ;
-;       |ds2331_driver:ds2331|                 ; 232 (49)            ; 141 (47)                  ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|ds2331_driver:ds2331                                                                             ; ds2331_driver         ; work         ;
-;          |i2c:rtc|                           ; 183 (183)           ; 94 (94)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|ds2331_driver:ds2331|i2c:rtc                                                                     ; i2c                   ; work         ;
-;       |rs485_controller:sem228a|             ; 212 (145)           ; 228 (158)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|rs485_controller:sem228a                                                                         ; rs485_controller      ; work         ;
+; |MYTHRILL_SOC                                ; 25495 (1)           ; 38187 (0)                 ; 2048              ; 30         ; 18   ; 0            ; |MYTHRILL_SOC                                                                                                                                ; MYTHRILL_SOC          ; work         ;
+;    |axi_sensor_controller:sensors|           ; 1109 (90)           ; 1160 (68)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors                                                                                                  ; axi_sensor_controller ; work         ;
+;       |aht10_driver:aht10|                   ; 301 (108)           ; 225 (124)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|aht10_driver:aht10                                                                               ; aht10_driver          ; work         ;
+;          |i2c:aht10|                         ; 193 (193)           ; 101 (101)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|aht10_driver:aht10|i2c:aht10                                                                     ; i2c                   ; work         ;
+;       |ds2331_driver:ds2331|                 ; 234 (49)            ; 141 (47)                  ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|ds2331_driver:ds2331                                                                             ; ds2331_driver         ; work         ;
+;          |i2c:rtc|                           ; 185 (185)           ; 94 (94)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|ds2331_driver:ds2331|i2c:rtc                                                                     ; i2c                   ; work         ;
+;       |rs485_controller:sem228a|             ; 211 (144)           ; 228 (158)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|rs485_controller:sem228a                                                                         ; rs485_controller      ; work         ;
 ;          |uart:rs485|                        ; 67 (67)             ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|rs485_controller:sem228a|uart:rs485                                                              ; uart                  ; work         ;
-;       |rs485_controller:sn3000t|             ; 184 (145)           ; 204 (158)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|rs485_controller:sn3000t                                                                         ; rs485_controller      ; work         ;
+;       |rs485_controller:sn3000t|             ; 183 (144)           ; 204 (158)                 ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|rs485_controller:sn3000t                                                                         ; rs485_controller      ; work         ;
 ;          |uart:rs485|                        ; 39 (39)             ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|rs485_controller:sn3000t|uart:rs485                                                              ; uart                  ; work         ;
 ;       |sensor_poll_timer:poll|               ; 90 (90)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|sensor_poll_timer:poll                                                                           ; sensor_poll_timer     ; work         ;
 ;       |sync_pipe:p_hour|                     ; 0 (0)               ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axi_sensor_controller:sensors|sync_pipe:p_hour                                                                                 ; sync_pipe             ; work         ;
@@ -393,8 +393,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |pwm:core|                             ; 32 (32)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axil_pwm:pwm|pwm:core                                                                                                          ; pwm                   ; work         ;
 ;    |axil_uart:debug_host|                    ; 71 (16)             ; 80 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axil_uart:debug_host                                                                                                           ; axil_uart             ; work         ;
 ;       |uart:u_uart|                          ; 55 (55)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|axil_uart:debug_host|uart:u_uart                                                                                               ; uart                  ; work         ;
-;    |picorv32_axi:cpu|                        ; 2117 (0)            ; 1142 (0)                  ; 2048              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu                                                                                                               ; picorv32_axi          ; work         ;
-;       |picorv32:picorv32_core|               ; 2103 (1599)         ; 1138 (683)                ; 2048              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu|picorv32:picorv32_core                                                                                        ; picorv32              ; work         ;
+;    |picorv32_axi:cpu|                        ; 2116 (0)            ; 1142 (0)                  ; 2048              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu                                                                                                               ; picorv32_axi          ; work         ;
+;       |picorv32:picorv32_core|               ; 2102 (1598)         ; 1138 (683)                ; 2048              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu|picorv32:picorv32_core                                                                                        ; picorv32              ; work         ;
 ;          |altsyncram:cpuregs_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu|picorv32:picorv32_core|altsyncram:cpuregs_rtl_0                                                               ; altsyncram            ; work         ;
 ;             |altsyncram_d2k1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu|picorv32:picorv32_core|altsyncram:cpuregs_rtl_0|altsyncram_d2k1:auto_generated                                ; altsyncram_d2k1       ; work         ;
 ;          |altsyncram:cpuregs_rtl_1|          ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |MYTHRILL_SOC|picorv32_axi:cpu|picorv32:picorv32_core|altsyncram:cpuregs_rtl_1                                                               ; altsyncram            ; work         ;
@@ -3420,7 +3420,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 156                         ;
 ;     plain             ; 1092                        ;
 ; arriav_io_obuf        ; 4                           ;
-; arriav_lcell_comb     ; 25492                       ;
+; arriav_lcell_comb     ; 25495                       ;
 ;     arith             ; 2412                        ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 1089                        ;
@@ -3428,16 +3428,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 67                          ;
 ;         4 data inputs ; 63                          ;
 ;         5 data inputs ; 76                          ;
-;     extend            ; 464                         ;
-;         7 data inputs ; 464                         ;
-;     normal            ; 22584                       ;
+;     extend            ; 463                         ;
+;         7 data inputs ; 463                         ;
+;     normal            ; 22588                       ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4123                        ;
-;         2 data inputs ; 590                         ;
-;         3 data inputs ; 381                         ;
-;         4 data inputs ; 4757                        ;
-;         5 data inputs ; 771                         ;
-;         6 data inputs ; 11961                       ;
+;         1 data inputs ; 4124                        ;
+;         2 data inputs ; 591                         ;
+;         3 data inputs ; 379                         ;
+;         4 data inputs ; 4758                        ;
+;         5 data inputs ; 772                         ;
+;         6 data inputs ; 11963                       ;
 ;     shared            ; 32                          ;
 ;         2 data inputs ; 32                          ;
 ; arriav_mac            ; 30                          ;
@@ -3454,7 +3454,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:02     ;
+; Top            ; 00:00:55     ;
 +----------------+--------------+
 
 
@@ -3464,7 +3464,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Thu Oct  8 22:10:07 2026
+    Info: Processing started: Sun Oct 11 21:33:54 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MYTHRILL_SOC -c MYTHRILL_SOC
 Warning (12473): User specified to use only one processors but 6 processors were detected which could be used to decrease run time.
 Info (12021): Found 1 design units, including 1 entities, in source file src/uart.sv
@@ -3516,7 +3516,7 @@ Info (12021): Found 4 design units, including 4 entities, in source file src/neu
     Info (12023): Found entity 3: relu File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 261
     Info (12023): Found entity 4: linear File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 283
 Info (12021): Found 1 design units, including 1 entities, in source file src/mythrill-soc.sv
-    Info (12023): Found entity 1: MYTHRILL_SOC File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 11
+    Info (12023): Found entity 1: MYTHRILL_SOC File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 6
 Info (12021): Found 0 design units, including 0 entities, in source file src/mlp_include.sv
 Info (12021): Found 1 design units, including 1 entities, in source file src/mlp_bridge.sv
     Info (12023): Found entity 1: mlp_bridge File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/mlp_bridge.sv Line: 19
@@ -3529,11 +3529,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/i2c
 Info (12021): Found 1 design units, including 1 entities, in source file src/ds2331_driver.sv
     Info (12023): Found entity 1: ds2331_driver File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/ds2331_driver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_uart.sv
-    Info (12023): Found entity 1: axil_uart File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_uart.sv Line: 11
+    Info (12023): Found entity 1: axil_uart File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_uart.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_pwm.sv
-    Info (12023): Found entity 1: axil_pwm File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_pwm.sv Line: 8
+    Info (12023): Found entity 1: axil_pwm File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_pwm.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_mlp.sv
-    Info (12023): Found entity 1: axil_mlp File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 22
+    Info (12023): Found entity 1: axil_mlp File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_interconnect.sv
     Info (12023): Found entity 1: axil_interconnect File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_interconnect.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_gpio.sv
@@ -3541,18 +3541,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/axi
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_esc.sv
     Info (12023): Found entity 1: axil_esc File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_esc.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file src/axil_bram.sv
-    Info (12023): Found entity 1: axil_bram File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_bram.sv Line: 6
+    Info (12023): Found entity 1: axil_bram File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_bram.sv Line: 4
 Info (12021): Found 3 design units, including 3 entities, in source file src/axi_sensor_controller.sv
-    Info (12023): Found entity 1: axi_sensor_controller File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 19
-    Info (12023): Found entity 2: sensor_poll_timer File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 230
-    Info (12023): Found entity 3: sync_pipe File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 269
+    Info (12023): Found entity 1: axi_sensor_controller File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 14
+    Info (12023): Found entity 2: sensor_poll_timer File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 225
+    Info (12023): Found entity 3: sync_pipe File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 264
 Info (12021): Found 1 design units, including 1 entities, in source file src/aht10_driver.sv
     Info (12023): Found entity 1: aht10_driver File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 1
 Warning (10222): Verilog HDL Parameter Declaration warning at neuron.sv(26): Parameter Declaration in module "neuron" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 26
 Info (12127): Elaborating entity "MYTHRILL_SOC" for the top level hierarchy
-Info (12128): Elaborating entity "reset_top" for hierarchy "reset_top:rst_top" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 50
+Info (12128): Elaborating entity "reset_top" for hierarchy "reset_top:rst_top" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 45
 Warning (10230): Verilog HDL assignment warning at reset_top.sv(13): truncated value with size 32 to match size of target (8) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/reset_top.sv Line: 13
-Info (12128): Elaborating entity "picorv32_axi" for hierarchy "picorv32_axi:cpu" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 115
+Info (12128): Elaborating entity "picorv32_axi" for hierarchy "picorv32_axi:cpu" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 112
 Info (12128): Elaborating entity "picorv32_axi_adapter" for hierarchy "picorv32_axi:cpu|picorv32_axi_adapter:axi_adapter" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/picorv32.v Line: 2646
 Info (12128): Elaborating entity "picorv32" for hierarchy "picorv32_axi:cpu|picorv32:picorv32_core" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/picorv32.v Line: 2723
 Warning (10036): Verilog HDL or VHDL warning at picorv32.v(181): object "dbg_insn_addr" assigned a value but never read File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/picorv32.v Line: 181
@@ -3626,18 +3626,18 @@ Warning (10230): Verilog HDL assignment warning at picorv32.v(2313): truncated v
 Info (12128): Elaborating entity "picorv32_pcpi_div" for hierarchy "picorv32_axi:cpu|picorv32:picorv32_core|picorv32_pcpi_div:pcpi_div" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/picorv32.v Line: 317
 Warning (10259): Verilog HDL error at picorv32.v(2478): constant value overflow File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/picorv32.v Line: 2478
 Warning (10230): Verilog HDL assignment warning at picorv32.v(2499): truncated value with size 63 to match size of target (32) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/picorv32.v Line: 2499
-Info (12128): Elaborating entity "axil_interconnect" for hierarchy "axil_interconnect:xbar" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 152
-Info (12128): Elaborating entity "axil_bram" for hierarchy "axil_bram:bram" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 176
-Info (12128): Elaborating entity "axil_gpio" for hierarchy "axil_gpio:gpio" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 201
-Info (12128): Elaborating entity "axil_pwm" for hierarchy "axil_pwm:pwm" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 223
-Info (12128): Elaborating entity "pwm" for hierarchy "axil_pwm:pwm|pwm:core" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_pwm.sv Line: 95
-Info (12128): Elaborating entity "axil_uart" for hierarchy "axil_uart:debug_host" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 249
-Info (12128): Elaborating entity "uart" for hierarchy "axil_uart:debug_host|uart:u_uart" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_uart.sv Line: 123
-Info (12128): Elaborating entity "axil_mlp" for hierarchy "axil_mlp:mlp" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 283
-Warning (10230): Verilog HDL assignment warning at axil_MLP.sv(190): truncated value with size 32 to match size of target (3) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 190
-Info (12128): Elaborating entity "mlp_bridge" for hierarchy "axil_mlp:mlp|mlp_bridge:scaler" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 108
-Warning (10230): Verilog HDL assignment warning at aht10_driver.sv(218): truncated value with size 32 to match size of target (8) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 218
-Info (12128): Elaborating entity "MLP" for hierarchy "axil_mlp:mlp|MLP:core" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 126
+Info (12128): Elaborating entity "axil_interconnect" for hierarchy "axil_interconnect:xbar" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 149
+Info (12128): Elaborating entity "axil_bram" for hierarchy "axil_bram:bram" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 173
+Info (12128): Elaborating entity "axil_gpio" for hierarchy "axil_gpio:gpio" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 197
+Info (12128): Elaborating entity "axil_pwm" for hierarchy "axil_pwm:pwm" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 218
+Info (12128): Elaborating entity "pwm" for hierarchy "axil_pwm:pwm|pwm:core" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_pwm.sv Line: 92
+Info (12128): Elaborating entity "axil_uart" for hierarchy "axil_uart:debug_host" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 244
+Info (12128): Elaborating entity "uart" for hierarchy "axil_uart:debug_host|uart:u_uart" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_uart.sv Line: 121
+Info (12128): Elaborating entity "axil_mlp" for hierarchy "axil_mlp:mlp" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 278
+Warning (10230): Verilog HDL assignment warning at axil_MLP.sv(189): truncated value with size 32 to match size of target (3) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 189
+Info (12128): Elaborating entity "mlp_bridge" for hierarchy "axil_mlp:mlp|mlp_bridge:scaler" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 107
+Warning (10230): Verilog HDL assignment warning at aht10_driver.sv(219): truncated value with size 32 to match size of target (8) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 219
+Info (12128): Elaborating entity "MLP" for hierarchy "axil_mlp:mlp|MLP:core" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axil_MLP.sv Line: 125
 Info (12128): Elaborating entity "layer" for hierarchy "axil_mlp:mlp|MLP:core|layer:l1" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MLP.sv Line: 63
 Info (12128): Elaborating entity "neuron" for hierarchy "axil_mlp:mlp|MLP:core|layer:l1|neuron:neuron_gen[0].n" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MLP.sv Line: 279
 Warning (10036): Verilog HDL or VHDL warning at neuron.sv(41): object "wen" assigned a value but never read File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 41
@@ -3716,15 +3716,15 @@ Warning (10230): Verilog HDL assignment warning at neuron.sv(101): truncated val
 Warning (10230): Verilog HDL assignment warning at neuron.sv(109): truncated value with size 65 to match size of target (64) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 109
 Info (12128): Elaborating entity "weight_rom" for hierarchy "axil_mlp:mlp|MLP:core|layer:l3|neuron:neuron_gen[0].n|weight_rom:WM" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 134
 Info (12128): Elaborating entity "linear" for hierarchy "axil_mlp:mlp|MLP:core|layer:l3|neuron:neuron_gen[0].n|linear:g_Linear.s1" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/neuron.sv Line: 145
-Info (12128): Elaborating entity "axi_sensor_controller" for hierarchy "axi_sensor_controller:sensors" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 323
-Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_temp" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 71
-Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_irr" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 73
-Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_hour" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 75
-Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_irrv" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 76
-Info (12128): Elaborating entity "sensor_poll_timer" for hierarchy "axi_sensor_controller:sensors|sensor_poll_timer:poll" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 163
-Info (12128): Elaborating entity "rs485_controller" for hierarchy "axi_sensor_controller:sensors|rs485_controller:sem228a" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 181
+Info (12128): Elaborating entity "axi_sensor_controller" for hierarchy "axi_sensor_controller:sensors" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/MYTHRILL-SOC.sv Line: 318
+Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_temp" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 66
+Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_irr" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 68
+Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_hour" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 70
+Info (12128): Elaborating entity "sync_pipe" for hierarchy "axi_sensor_controller:sensors|sync_pipe:p_irrv" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 71
+Info (12128): Elaborating entity "sensor_poll_timer" for hierarchy "axi_sensor_controller:sensors|sensor_poll_timer:poll" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 158
+Info (12128): Elaborating entity "rs485_controller" for hierarchy "axi_sensor_controller:sensors|rs485_controller:sem228a" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 176
 Info (12128): Elaborating entity "uart" for hierarchy "axi_sensor_controller:sensors|rs485_controller:sem228a|uart:rs485" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/rs485_controller.sv Line: 244
-Info (12128): Elaborating entity "aht10_driver" for hierarchy "axi_sensor_controller:sensors|aht10_driver:aht10" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 212
+Info (12128): Elaborating entity "aht10_driver" for hierarchy "axi_sensor_controller:sensors|aht10_driver:aht10" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 207
 Warning (10036): Verilog HDL or VHDL warning at aht10_driver.sv(48): object "cal" assigned a value but never read File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 48
 Warning (10230): Verilog HDL assignment warning at aht10_driver.sv(91): truncated value with size 32 to match size of target (22) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 91
 Warning (10230): Verilog HDL assignment warning at aht10_driver.sv(101): truncated value with size 32 to match size of target (8) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 101
@@ -3734,7 +3734,7 @@ Warning (10230): Verilog HDL assignment warning at aht10_driver.sv(169): truncat
 Info (12128): Elaborating entity "i2c" for hierarchy "axi_sensor_controller:sensors|aht10_driver:aht10|i2c:aht10" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/aht10_driver.sv Line: 69
 Warning (10230): Verilog HDL assignment warning at i2c.sv(213): truncated value with size 32 to match size of target (1) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/i2c.sv Line: 213
 Warning (10230): Verilog HDL assignment warning at i2c.sv(214): truncated value with size 32 to match size of target (1) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/i2c.sv Line: 214
-Info (12128): Elaborating entity "ds2331_driver" for hierarchy "axi_sensor_controller:sensors|ds2331_driver:ds2331" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 224
+Info (12128): Elaborating entity "ds2331_driver" for hierarchy "axi_sensor_controller:sensors|ds2331_driver:ds2331" File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/axi_sensor_controller.sv Line: 219
 Warning (10230): Verilog HDL assignment warning at ds2331_driver.sv(76): truncated value with size 32 to match size of target (23) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/ds2331_driver.sv Line: 76
 Warning (10230): Verilog HDL assignment warning at ds2331_driver.sv(86): truncated value with size 32 to match size of target (8) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/ds2331_driver.sv Line: 86
 Warning (10230): Verilog HDL assignment warning at ds2331_driver.sv(121): truncated value with size 32 to match size of target (23) File: C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/src/ds2331_driver.sv Line: 121
@@ -3809,18 +3809,18 @@ Info (17049): 707 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/valer/OneDrive/Documents/BRIN STUFF/COMPETITION/DE10-NANO/output_files/MYTHRILL_SOC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 57274 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 57277 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 8 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 57162 logic cells
+    Info (21061): Implemented 57165 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 30 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 168 warnings
-    Info: Peak virtual memory: 5319 megabytes
-    Info: Processing ended: Thu Oct  8 22:11:29 2026
-    Info: Elapsed time: 00:01:22
-    Info: Total CPU time (on all processors): 00:01:30
+    Info: Peak virtual memory: 5379 megabytes
+    Info: Processing ended: Sun Oct 11 21:35:08 2026
+    Info: Elapsed time: 00:01:14
+    Info: Total CPU time (on all processors): 00:01:20
 
 
 +------------------------------------------+

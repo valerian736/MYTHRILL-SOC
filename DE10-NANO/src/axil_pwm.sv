@@ -1,6 +1,3 @@
-// AXI4-Lite wrapper around the plain `pwm` core (pwm.sv).
-// Core is unchanged. Wrapper adds: bus handshake + 2 registers.
-//
 // Register map (offset from slave base):
 //   0x0  CTRL  bit0 = enable          (rw)
 //   0x4  DUTY  PWM_RES bits           (rw)   duty cycle = DUTY / 2^PWM_RES

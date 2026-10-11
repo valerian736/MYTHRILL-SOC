@@ -1,5 +1,3 @@
-// AXI4-Lite UART slave. Wraps uart.sv.
-//
 // Register map (offset from slave base):
 //   0x0  CTRL     bit0 = enable                       (rw)  gates TX
 //   0x4  TX_DATA  write sends one byte                (w)   dropped if disabled or busy

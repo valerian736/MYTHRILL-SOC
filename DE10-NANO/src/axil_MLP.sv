@@ -2,7 +2,6 @@
 `include "MLP_include.sv"
 
 // AXI4-Lite slave wrapper around MLP core (MLP.sv).
-//
 // Offset  Name      Access  Note
 // 0x00    MLP_RDY   r       bit0 = 1: result valid. Clears on new start.
 // 0x04    MLP_OUT   r       last prediction
