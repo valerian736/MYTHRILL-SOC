@@ -15,7 +15,9 @@ Repository ini adalah submission tim **MYTHRILL** untuk **PERURI Chip Hackathon 
 
 Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** dengan **akselerator Multilayer Perceptron (MLP)** khusus untuk memprediksi laju presipitasi (curah hujan) secara real-time dari lima fitur sensor: iradiansi surya, jam, kelembapan, suhu, dan kecepatan angin. Prediksi kemudian dipetakan ke sinyal PWM yang mengendalikan kecepatan thruster USV, sehingga konsumsi daya propulsi menyesuaikan kondisi cuaca tanpa memerlukan SBC eksternal.
 
-Walaupun aplikasi yang diambil disini adalah mengendalikan kecepatan thruster pada USV, MYHTRILL-SOC dapat digunakan untuk aplikasi lain seperti sensor fault detection, industrial monitoring dan intelligent embedded systems. Pengendalian kecepatan thruster pada USV merupakan proof of concept yang dibuat untuk menunjukkan kematangan arsitektur yang dikembangkan  
+Walaupun pengendalian kecepatan thruster pada Unmanned Surface Vehicle (USV) dipilih sebagai proof of concept, fokus utama MYTHRILL-SOC adalah arsitektur System-on-Chip berbasis RISC-V dengan jalur hardware khusus dari sensor menuju akselerator MLP (sensor-to-MLP datapath). Arsitektur ini memungkinkan data sensor diproses oleh akselerator tanpa harus melalui CPU untuk setiap proses inferensi, sementara prosesor RISC-V menangani konfigurasi, supervisi, dan pengendalian sistem.
+
+Pendekatan ini tidak terbatas pada aplikasi USV, tetapi dapat dikembangkan untuk berbagai aplikasi Edge AI seperti industrial monitoring, sensor fault detection, predictive maintenance, dan intelligent embedded systems.
 
 **Status**: RTL telah disintesis pada **dua toolchain berbeda** (Gowin dan Intel Quartus Prime) dan **didemonstrasikan pada board FPGA Gowin GW2AR-18 (Tang Nano 20K)**, menghasilkan prediksi `Rain = 1.306 mm/h` untuk input sensor tetap, dengan output PWM yang sesuai. Verifikasi numerik menunjukkan **0 LSB error** terhadap model floating-point Keras pada 100 vektor uji.
 
