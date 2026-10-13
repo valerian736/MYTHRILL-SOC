@@ -11,7 +11,6 @@
 
 ## Kata Pengantar
 
-Repository ini adalah submission tim **MYTHRILL** untuk **PERURI Chip Hackathon 2026**, kategori **03 – AI / Edge Accelerator**.
 
 Sistem yang dirancang adalah sebuah **System-on-Chip (SoC) berbasis RISC-V** dengan **akselerator Multilayer Perceptron (MLP)** khusus untuk memprediksi laju presipitasi (curah hujan) secara real-time dari lima fitur sensor: iradiansi surya, jam, kelembapan, suhu, dan kecepatan angin. Prediksi kemudian dipetakan ke sinyal PWM yang mengendalikan kecepatan thruster USV, sehingga konsumsi daya propulsi menyesuaikan kondisi cuaca tanpa memerlukan SBC eksternal.
 
@@ -19,20 +18,7 @@ Walaupun pengendalian kecepatan thruster pada Unmanned Surface Vehicle (USV) dip
 
 Pendekatan ini tidak terbatas pada aplikasi USV, tetapi dapat dikembangkan untuk berbagai aplikasi Edge AI seperti industrial monitoring, sensor fault detection, predictive maintenance, dan intelligent embedded systems.
 
-**Status**: RTL telah disintesis pada **dua toolchain berbeda** (Gowin dan Intel Quartus Prime) dan **didemonstrasikan pada board FPGA Gowin GW2AR-18 (Tang Nano 20K)**, menghasilkan prediksi `Rain = 1.306 mm/h` untuk input sensor tetap, dengan output PWM yang sesuai. Verifikasi numerik menunjukkan **0 LSB error** terhadap model floating-point Keras pada 100 vektor uji.
-
----
-
-## Tim
-
-| Nama                       | Peran                     | Kontak                      |
-| -------------------------- | ------------------------- | --------------------------- |
-| **Valerian Shean Tenedy**  | Desain RTL, integrasi SoC | valerian.tenedy@binus.ac.id |
-| **Ryan Reagan Dharmajaya** | Verifikasi, Business Analyst    | ryan.dharmajaya@binus.ac.id |
-
-**Dosen Pembimbing**: Daniel Patricko Gemeno Hutabarat, S.T., M.T. — Universitas Bina Nusantara
-
----
+pengembangan versi selanjutnya akan mengintegrasikan NPU untuk pengplikasian yang lebih general
 
 ## Resource Utilization
 
