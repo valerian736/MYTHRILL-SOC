@@ -37,7 +37,6 @@ module axil_bram #(
   logic [AW-1:0] widx;
   assign widx = awaddr[AW+1:2];
 
-  // memory array: no reset
   always_ff @(posedge clk) begin
     if (do_write) begin
       if (wstrb[0]) mem[widx][7:0] <= wdata[7:0];
@@ -47,14 +46,12 @@ module axil_bram #(
     end
   end
 
-  // write response
   always_ff @(posedge clk) begin
     if (!resetn) bvalid <= 1'b0;
     else if (do_write) bvalid <= 1'b1;
     else if (bvalid && bready) bvalid <= 1'b0;
   end
 
-  // ---- read ----
   logic do_read;
   assign do_read = arvalid & ~rvalid;
   assign arready = do_read;
@@ -62,12 +59,10 @@ module axil_bram #(
   logic [AW-1:0] ridx;
   assign ridx = araddr[AW+1:2];
 
-  // read data: synchronous, no reset
   always_ff @(posedge clk) begin
     if (do_read) rdata <= mem[ridx];
   end
 
-  // read response
   always_ff @(posedge clk) begin
     if (!resetn) rvalid <= 1'b0;
     else if (do_read) rvalid <= 1'b1;

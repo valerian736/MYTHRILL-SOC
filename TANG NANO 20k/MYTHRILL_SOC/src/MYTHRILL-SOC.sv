@@ -1,26 +1,22 @@
 `default_nettype wire
-//   picorv32_axi --(AXI4-Lite)--> axil_interconnect --+--> axil_bram (0x0000_0000)
-//                                                     +--> axil_gpio (0x1000_0000)
-//                                                     +--> axil_pwm  (0x2000_0000)
-//                                                     +--> axil_uart (0x3000_0000)
-//                                                     +--> axil_mlp  (0x4000_0000)
-//                                                     +--> axi_sensor_controller (0x5000_0000)
-//
-//   sensors --> (3-stage pipes) --> axil_mlp [scaler + MLP] (direct, no CPU)
-
+// Valerian Shean Tenedy
+// 2702243571 
+// MYTHRILL-SOC
 module MYTHRILL_SOC #(
     parameter int GPIO_W    = 1,
     parameter int CLK_FREQ  = 27_000_000,
     parameter int UART_BAUD = 115200
 ) (
     input logic clk,
-    input logic reset,  
+    input logic reset,
     output logic trap,
     output logic [GPIO_W-1:0] gpio_out,
     input logic [GPIO_W-1:0] gpio_in,
     output logic pwm_out,
     input logic uart_rx,
     output logic uart_tx,
+    input logic uartn_rx,
+    output logic uartn_tx,
     input logic SEM228A_RX,
     output logic SEM228A_TX,
     output logic SEM228A_DERE,
@@ -32,15 +28,14 @@ module MYTHRILL_SOC #(
     inout wire SCL_RTC,
     inout wire SDA_RTC
 );
-  localparam int NS = 6;
+  localparam int NS = 7;
   localparam int S_BRAM = 0;
   localparam int S_GPIO = 1;
   localparam int S_PWM = 2;
   localparam int S_UART = 3;
   localparam int S_MLP = 4;
   localparam int S_SENS = 5;
-
-  // ---------- reset ----------
+  localparam int S_UARTN = 6;
 
   logic resetn;
   reset_top rst_top (
@@ -70,7 +65,6 @@ module MYTHRILL_SOC #(
   logic [NS-1:0] s_bvalid, s_bready;
   logic [NS-1:0] s_arvalid, s_arready, s_rvalid, s_rready;
 
-  // ---------- CPU ----------
   picorv32_axi #(
       .PROGADDR_RESET (32'h0000_0000),  // boot from BRAM
       .STACKADDR      (32'h0000_1000),  // top of 4 KB BRAM
@@ -114,7 +108,7 @@ module MYTHRILL_SOC #(
       .irq       (32'b0)
   );
 
-  // ---------- interconnect ----------
+
   axil_interconnect #(
       .N(NS)
   ) xbar (
@@ -151,7 +145,7 @@ module MYTHRILL_SOC #(
       .s_rready (s_rready)
   );
 
-  // ---------- slave 0: BRAM ----------
+
   axil_bram #(
       .WORDS(1024),
       .INIT ("firmware.hex")
@@ -175,7 +169,7 @@ module MYTHRILL_SOC #(
       .rready(s_rready[S_BRAM])
   );
 
-  // ---------- slave 1: GPIO ----------
+
   axil_gpio #(
       .GPIO_W(GPIO_W)
   ) gpio (
@@ -200,8 +194,7 @@ module MYTHRILL_SOC #(
       .gpio_in(gpio_in)
   );
 
-  // ---------- slave 2: PWM ----------
-  axil_pwm pwm (
+    axil_esc pwm (
       .clk(clk),
       .resetn(resetn),
       .awaddr(s_awaddr[S_PWM]),
@@ -222,7 +215,6 @@ module MYTHRILL_SOC #(
       .pwm_out(pwm_out)
   );
 
-  // ---------- slave 3: UART ----------
   axil_uart #(
       .BAUD_RATE(UART_BAUD),
       .CLK_FREQ (CLK_FREQ)
@@ -248,13 +240,36 @@ module MYTHRILL_SOC #(
       .tx(uart_tx)
   );
 
-  // ---------- sensor -> MLP direct path ----------
+  axil_uart #(
+      .BAUD_RATE(9600),
+      .CLK_FREQ (CLK_FREQ)
+  ) yoloo (
+      .clk(clk),
+      .resetn(resetn),
+      .awaddr(s_awaddr[S_UARTN]),
+      .awvalid(s_awvalid[S_UARTN]),
+      .awready(s_awready[S_UARTN]),
+      .wdata(s_wdata[S_UARTN]),
+      .wstrb(s_wstrb[S_UARTN]),
+      .wvalid(s_wvalid[S_UARTN]),
+      .wready(s_wready[S_UARTN]),
+      .bvalid(s_bvalid[S_UARTN]),
+      .bready(s_bready[S_UARTN]),
+      .araddr(s_araddr[S_UARTN]),
+      .arvalid(s_arvalid[S_UARTN]),
+      .arready(s_arready[S_UARTN]),
+      .rdata(s_rdata[S_UARTN]),
+      .rvalid(s_rvalid[S_UARTN]),
+      .rready(s_rready[S_UARTN]),
+      .rx(uartn_rx),
+      .tx(uartn_tx)
+  );
+
   logic [19:0] temp_raw, hum_raw;
   logic [15:0] irr_raw, wind_raw;
   logic [7:0] hour_raw;
   logic irr_valid, wind_valid;
 
-  // ---------- slave 4: MLP ----------
   axil_mlp mlp (
       .clk(clk),
       .resetn(resetn),
@@ -282,7 +297,6 @@ module MYTHRILL_SOC #(
       .wind_valid(wind_valid)
   );
 
-  // ---------- slave 5: sensors ----------
   axi_sensor_controller #(
       .CLK_FREQ(CLK_FREQ)
   ) sensors (

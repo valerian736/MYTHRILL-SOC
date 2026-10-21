@@ -34,7 +34,7 @@ module axil_esc #(
     output logic        rvalid,
     input  logic        rready,
 
-    output logic esc_out
+    output logic pwm_out
 );
   localparam int US_DIV = CLK_FREQ / 1_000_000;               // clocks per microsecond
   localparam int DIV_W  = (US_DIV > 1) ? $clog2(US_DIV) : 1;
@@ -125,7 +125,7 @@ module axil_esc #(
 
   // ---------- output, registered ----------
   always_ff @(posedge clk) begin
-    if (!resetn) esc_out <= 1'b0;
-    else esc_out <= enable & (cnt < pulse_clamped);
+    if (!resetn) pwm_out <= 1'b0;
+    else pwm_out <= enable & (cnt < pulse_clamped);
   end
 endmodule
