@@ -2,7 +2,6 @@
 ## *designed by Valerian Shean Tenedy*
 **SoC berbasis RISC-V dengan Akselerator MLP untuk Prediksi Curah Hujan pada Sistem Propulsi Cerdas USV Tenaga Surya**
 
-[![Track](https://img.shields.io/badge/Track-03%20AI%20%2F%20Edge%20Accelerator-green)]()
 [![FPGA](https://img.shields.io/badge/FPGA-Cyclone%20V%20%7C%20GW2AR--18-orange)]()
 [![Status](https://img.shields.io/badge/status-work%20in%20progress-brightgreen)]()
 
