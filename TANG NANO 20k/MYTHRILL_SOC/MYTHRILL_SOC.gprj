@@ -15,6 +15,7 @@
         <File path="src/axil_esc.sv" type="file.verilog" enable="1"/>
         <File path="src/axil_gpio.sv" type="file.verilog" enable="1"/>
         <File path="src/axil_interconnect.sv" type="file.verilog" enable="1"/>
+        <File path="src/axil_pkg.sv" type="file.verilog" enable="1"/>
         <File path="src/axil_pwm.sv" type="file.verilog" enable="1"/>
         <File path="src/axil_uart.sv" type="file.verilog" enable="1"/>
         <File path="src/ds2331_driver.sv" type="file.verilog" enable="1"/>

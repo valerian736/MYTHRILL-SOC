@@ -14,7 +14,7 @@
 
 module axi_sensor_controller #(
     parameter int CLK_FREQ  = 27_000_000,
-    parameter int I2C_SPEED = 400_000
+    parameter int I2C_SPEED = 100_000
 ) (
     input logic clk,
     input logic resetn,
@@ -64,6 +64,9 @@ module axi_sensor_controller #(
   logic irr_valid_d, wind_valid_d;
   logic irr_valid_i, wind_valid_i;
 
+    //debug 
+  //logic [15:0] rtc_dbg;
+
   sync_pipe #(
       .W(20),
       .STAGES(PIPE)
@@ -109,6 +112,8 @@ module axi_sensor_controller #(
       .d(hour_d),
       .q(hour_raw)
   );
+
+//debug 
   sync_pipe #(
       .W(1),
       .STAGES(PIPE)
@@ -183,6 +188,7 @@ module axi_sensor_controller #(
         4'd6:    rdata <= sensor_poll_ms;
         4'd7:    rdata <= {8'b0, irr_dbg_rx0, irr_dbg_tx, irr_dbg_rxc, irr_dbg_fl};
         4'd8:    rdata <= {8'b0, wind_dbg_rx0, wind_dbg_tx, wind_dbg_rxc, wind_dbg_fl};
+        //4'd9:    rdata <= 32'(rtc_dbg);
         default: rdata <= '0;
       endcase
     end else if (rvalid && rready) begin
@@ -272,6 +278,7 @@ module axi_sensor_controller #(
       .sda(SDA_RTC),
       .i2c_ack_error(rtc_ack_err),
       .hours(hour_d)
+     // .dbg(rtc_dbg)
   );
 
 endmodule : axi_sensor_controller

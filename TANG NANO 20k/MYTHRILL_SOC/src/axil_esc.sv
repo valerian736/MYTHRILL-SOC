@@ -1,4 +1,4 @@
-// AXI4-Lite ESC / servo PWM slave. Drop-in for axil_pwm (same ports, same offsets).
+// AXI4-Lite ESC / servo PWM slave
 //
 // ESC signal: 50 Hz (20 ms period), pulse 1000 us = zero throttle,
 //             2000 us = full throttle.

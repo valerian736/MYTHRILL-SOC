@@ -14,6 +14,7 @@
         <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_esc.sv" type="verilog"/>
         <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_gpio.sv" type="verilog"/>
         <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_interconnect.sv" type="verilog"/>
+        <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_pkg.sv" type="verilog"/>
         <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_pwm.sv" type="verilog"/>
         <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\axil_uart.sv" type="verilog"/>
         <File path="C:\Users\valer\OneDrive\Documents\BRIN STUFF\COMPETITION\TANG NANO 20k\MYTHRILL_SOC\src\ds2331_driver.sv" type="verilog"/>

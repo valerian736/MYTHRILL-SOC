@@ -31,6 +31,7 @@ module uart #(
     tx_idle,
     tx_transmit
   } tx_t;
+
   typedef enum logic {
     rx_idle,
     rx_receive
@@ -52,7 +53,7 @@ module uart #(
       count_baudrate    <= '0;
       count_baudrate_ov <= '0;
     end else begin
-      if (count_baudrate < baudrate_period) begin
+      if (count_baudrate < baudrate_period) begin : baud_rate
         count_baudrate = count_baudrate + 1'b1;
         baud_pulse <= 1'b0;
       end else begin
@@ -61,7 +62,7 @@ module uart #(
         count_baudrate_ov = '0;
       end
 
-      if (count_baudrate_ov < baudrate_period_ov) begin
+      if (count_baudrate_ov < baudrate_period_ov) begin : oversampling
         count_baudrate_ov = count_baudrate_ov + 1'b1;
         baud_ov_pulse <= 1'b0;
       end else begin

@@ -2,9 +2,7 @@
 `include "MLP_include.sv"
 
 // 5 -> 4 (ReLU) -> 4 (ReLU) -> 1 (linear)
-// Features arrive one per cycle on in_data while in_valid high.
-// Prediction on out_data, qualified by out_valid.
-// Weights: w_<layer>_<neuron>.mem, biases: b_<layer>_<neuron>.mem (binary , $readmemb).
+
 
 `define ASIC_CONFIG 0
 `define TEST_RIG 0

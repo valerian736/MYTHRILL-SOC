@@ -1,6 +1,9 @@
 `default_nettype wire
-module axil_interconnect #(
-    parameter int N = 4
+module axil_interconnect
+  import axil_pkg::*;
+#(
+    parameter int N = 4,
+    parameter addr_map_32_t [N-1:0] ADDR_MAP = '0
 ) (
     input  logic [31:0] m_awaddr,
     input  logic        m_awvalid,
@@ -44,8 +47,8 @@ module axil_interconnect #(
     for (i = 0; i < N; i++) begin : g_slave
       localparam logic [3:0] SEL = 4'(i);
 
-      assign wr_sel[i] = (m_awaddr[31:28] == SEL);
-      assign rd_sel[i] = (m_araddr[31:28] == SEL);
+      assign wr_sel[i] = (m_awaddr >= ADDR_MAP[i].start_addr) && (m_awaddr <= ADDR_MAP[i].end_addr);
+      assign rd_sel[i] = (m_awaddr >= ADDR_MAP[i].start_addr) && (m_awaddr <= ADDR_MAP[i].end_addr);
 
       assign s_awaddr[i] = m_awaddr;
       assign s_wdata[i] = m_wdata;

@@ -1,5 +1,5 @@
 module ds2331_driver #(
-    parameter logic [6:0] ADDR = 7'b1101000,
+    parameter logic [6:0] ADDR = 7'h68,
     parameter int CLK_FREQ = 27000000,
     parameter int BUS_SPEED = 400000,
     parameter int POWERUP_MS = 250,
@@ -11,6 +11,7 @@ module ds2331_driver #(
     sda,
     output logic i2c_ack_error,
     output logic [7:0] hours
+    // debug output logic [15:0] dbg
 );
 
   typedef enum {
@@ -33,6 +34,9 @@ module ds2331_driver #(
   logic [7:0] i2c_data_rd;
   logic i2c_ack_err;
   logic busy_prev = 0;
+//debug
+//  logic [7:0] rd_cnt = 0;
+//  assign dbg = {6'd0, sda, scl, rd_cnt};
 
   ds_s state;
   logic [7:0] hour_raw = 0;
@@ -65,62 +69,68 @@ module ds2331_driver #(
       i2c_ena   <= 0;
       i2c_rw    <= 0;
       busy_prev <= 0;
-      busy_cnt = 0;
-      counter  = 0;
+      busy_cnt <= 0;
+      counter  <= 0;
       hour_raw <= 0;
       hours    <= 0;
+      //rd_cnt   <= 0;
     end else begin
       case (state)
         s_start: begin
           if (counter < POWERUP_DELAY) begin
-            counter = counter + 1;
+            counter <= counter + 1;
           end else begin
-            counter = 0;
+            counter <= 0;
             state <= s_read;
           end
         end
 
         s_read: begin
           busy_prev <= i2c_busy;
+
           if (!busy_prev && i2c_busy) begin
-            busy_cnt = busy_cnt + 1;
+            busy_cnt <= busy_cnt + 1;
           end
 
           case (busy_cnt)
             0: begin
-              i2c_ena <= 1'b1;
-              i2c_addr <= ADDR;
-              i2c_rw <= 0;
+              i2c_ena     <= 1'b1;
+              i2c_addr    <= ADDR;
+              i2c_rw      <= 1'b0;
               i2c_data_wr <= 8'h02;
             end
+
             1: begin
               i2c_rw <= 1'b1;
             end
+
             2: begin
-              i2c_ena <= 0;
+              i2c_ena <= 1'b0;
               if (!i2c_busy) begin
                 hour_raw <= i2c_data_rd;
-                busy_cnt = 0;
-                counter  = 0;
-                state <= s_output;
+                busy_cnt <= 0;
+                counter  <= 0;
+                state    <= s_output;
               end
             end
+
             default: begin
-              busy_cnt = 0;
+              busy_cnt <= 0;
             end
           endcase
         end
 
         s_output: begin
-          hours <= hour_raw;
-          state <= s_wait;
+          hours  <= hour_raw;
+          //rd_cnt <= rd_cnt + 1;
+          state  <= s_wait;
         end
 
         s_wait: begin
           if (counter < POLL_DELAY) begin
-            counter = counter + 1;
+            counter <= counter + 1;
           end else begin
-            counter = 0;
+            counter <= 0;
             state <= s_read;
           end
         end

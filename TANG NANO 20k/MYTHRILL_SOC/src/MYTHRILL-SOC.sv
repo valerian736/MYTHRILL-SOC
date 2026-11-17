@@ -17,6 +17,8 @@ module MYTHRILL_SOC #(
     output logic uart_tx,
     input logic uartn_rx,
     output logic uartn_tx,
+    input logic uartm_rx,
+    output logic uartm_tx,
     input logic SEM228A_RX,
     output logic SEM228A_TX,
     output logic SEM228A_DERE,
@@ -28,7 +30,7 @@ module MYTHRILL_SOC #(
     inout wire SCL_RTC,
     inout wire SDA_RTC
 );
-  localparam int NS = 7;
+  localparam int NS = 8;
   localparam int S_BRAM = 0;
   localparam int S_GPIO = 1;
   localparam int S_PWM = 2;
@@ -36,6 +38,7 @@ module MYTHRILL_SOC #(
   localparam int S_MLP = 4;
   localparam int S_SENS = 5;
   localparam int S_UARTN = 6;
+  localparam int S_UARTM = 7;
 
   logic resetn;
   reset_top rst_top (
@@ -44,7 +47,7 @@ module MYTHRILL_SOC #(
       resetn
   );
 
-  // ---------- CPU master bus ----------
+  // CPU m bus
   logic m_awvalid, m_awready;
   logic [31:0] m_awaddr;
   logic [ 2:0] m_awprot;
@@ -58,7 +61,7 @@ module MYTHRILL_SOC #(
   logic m_rvalid, m_rready;
   logic [31:0] m_rdata;
 
-  // ---------- slave buses, index = slave number ----------
+
   logic [NS-1:0][31:0] s_awaddr, s_wdata, s_araddr, s_rdata;
   logic [NS-1:0][3:0] s_wstrb;
   logic [NS-1:0] s_awvalid, s_awready, s_wvalid, s_wready;
@@ -109,8 +112,20 @@ module MYTHRILL_SOC #(
   );
 
 
+localparam axil_pkg::addr_map_32_t [NS-1:0] ADDR_MAP = '{
+  '{idx: S_UARTM, start_addr: 32'h7000_0000, end_addr: 32'h8000_0000},
+  '{idx: S_UARTN, start_addr: 32'h6000_0000, end_addr: 32'h7000_0000},
+  '{idx: S_SENS,  start_addr: 32'h5000_0000, end_addr: 32'h6000_0000},
+  '{idx: S_MLP,   start_addr: 32'h4000_0000, end_addr: 32'h5000_0000},
+  '{idx: S_UART,  start_addr: 32'h3000_0000, end_addr: 32'h4000_0000},
+  '{idx: S_PWM,   start_addr: 32'h2000_0000, end_addr: 32'h3000_0000},
+  '{idx: S_GPIO,  start_addr: 32'h1000_0000, end_addr: 32'h2000_0000},
+  '{idx: S_BRAM,  start_addr: 32'h0000_0000, end_addr: 32'h1000_0000}
+};
+
   axil_interconnect #(
-      .N(NS)
+      .N(NS),
+      .ADDR_MAP(ADDR_MAP)
   ) xbar (
       .m_awaddr (m_awaddr),
       .m_awvalid(m_awvalid),
@@ -243,7 +258,7 @@ module MYTHRILL_SOC #(
   axil_uart #(
       .BAUD_RATE(9600),
       .CLK_FREQ (CLK_FREQ)
-  ) yoloo (
+  ) uartn (
       .clk(clk),
       .resetn(resetn),
       .awaddr(s_awaddr[S_UARTN]),
@@ -263,6 +278,31 @@ module MYTHRILL_SOC #(
       .rready(s_rready[S_UARTN]),
       .rx(uartn_rx),
       .tx(uartn_tx)
+  );
+
+  axil_uart #(
+      .BAUD_RATE(9600),
+      .CLK_FREQ (CLK_FREQ)
+  ) uartm (
+      .clk(clk),
+      .resetn(resetn),
+      .awaddr(s_awaddr[S_UARTM]),
+      .awvalid(s_awvalid[S_UARTM]),
+      .awready(s_awready[S_UARTM]),
+      .wdata(s_wdata[S_UARTM]),
+      .wstrb(s_wstrb[S_UARTM]),
+      .wvalid(s_wvalid[S_UARTM]),
+      .wready(s_wready[S_UARTM]),
+      .bvalid(s_bvalid[S_UARTM]),
+      .bready(s_bready[S_UARTM]),
+      .araddr(s_araddr[S_UARTM]),
+      .arvalid(s_arvalid[S_UARTM]),
+      .arready(s_arready[S_UARTM]),
+      .rdata(s_rdata[S_UARTM]),
+      .rvalid(s_rvalid[S_UARTM]),
+      .rready(s_rready[S_UARTM]),
+      .rx(uartm_rx),
+      .tx(uartm_tx)
   );
 
   logic [19:0] temp_raw, hum_raw;
